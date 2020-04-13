@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<h1>{% trans "Sign Up" %}</h1>
+
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
+</form>
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main">
+    <!-- Login Form -->
+    <div class="container space-2 space-lg-3">
+{#    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">#}
+      <form class="js-validate w-md-75 w-lg-50 mx-md-auto" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        <!-- Title -->
+        <div class="mb-5 mb-md-7">
+          <h1 class="h2 mb-0">Welcome to Kallah Barter</h1>
+          <p>Fill out the form to get started.</p>
+        </div>
+        <!-- End Title -->
+
+              <!-- Form Group -->
+        <div class="js-form-message form-group">
+          <label class="input-label" for="signinSrEmail">Username - Fill this out to be annoynoums</label>
+            <!-- append to an attribute  name="email" id="signinSrEmail" placeholder="Email address" aria-label="Email address"  attr:data-msg="Please enter a valid email address."  -->
+            {{ form.username|attr:"type:text"|add_class:"form-control"|attr:"name:username"|attr:"id:signinSrUsername"|attr:"placeholder:username"|attr:"data-msg:Please enter a valid email username." }}
+{#          <input type="email" class="form-control" name="email" id="signinSrEmail" placeholder="Email address" aria-label="Email address" required#}
+{#                 data-msg="Please enter a valid email address.">#}
+        </div>
+        <!-- End Form Group -->
+
+        <!-- Form Group -->
+        <div class="js-form-message form-group">
+          <label class="input-label" for="signinSrEmail">Email address</label>
+            <!-- append to an attribute  name="email" id="signinSrEmail" placeholder="Email address" aria-label="Email address"  attr:data-msg="Please enter a valid email address."  -->
+            {{ form.email|attr:"type:email"|add_class:"form-control"|attr:"required"|attr:"name:email"|attr:"id:signinSrEmail"|attr:"placeholder:Ema k,mnllil address"|attr:"data-msg:Please enter a valid email address." }}
+{#          <input type="email" class="form-control" name="email" id="signinSrEmail" placeholder="Email address" aria-label="Email address" required#}
+{#                 data-msg="Please enter a valid email address.">#}
+        </div>
+        <!-- End Form Group -->
+
+        <!-- Form Group -->
+        <div class="js-form-message form-group">
+          <label class="input-label" for="signinSrPassword">Password</label>
+            {{ form.password1|attr:"type:password"|add_class:"form-control"|attr:"required"|attr:"name:password"|attr:"id:signinSrPassword"|attr:"placeholder:********"|attr:"data-msg:Your password is invalid. Please try again." }}
+{#          <input type="password" class="form-control" name="password" id="signinSrPassword" placeholder="********" aria-label="********" required#}
+{#                 data-msg="Your password is invalid. Please try again.">#}
+        </div>
+        <!-- End Form Group -->
+        <!-- End Form Group -->
+
+        <!-- Checkbox -->
+        <div class="js-form-message mb-5">
+          <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+            <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required
+                   data-msg="Please accept our Terms and Conditions.">
+            <label class="custom-control-label" for="termsCheckbox">
+              <small>
+                I agree to the
+                <a class="link-underline" href="../pages/terms.html">Terms and Conditions</a>
+              </small>
+            </label>
+          </div>
+        </div>
+        <!-- End Checkbox -->
+
+        <!-- Button -->
+        <div class="row align-items-center mb-5">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <span class="font-size-1 text-muted">Already have an account?</span>
+            {% blocktrans %}Already have an account? Then please <a class="font-size-1 font-weight-bold" href="{{ login_url }}">Login</a>{% endblocktrans %}
+          </div>
+
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+          <div class="col-sm-6 text-sm-right">
+            <button type="submit" class="btn btn-primary transition-3d-hover">{% trans "Sign Up" %}Get Started</button>
+          </div>
+        </div>
+        <!-- End Button -->
+      </form>
+    </div>
+    <!-- End Login Form -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+{% endblock %}

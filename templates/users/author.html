@@ -1,0 +1,997 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+  {% block content %}
+
+      <div id="logoAndNav" class="container mt-lg-n2">
+        <!-- Nav -->
+        <nav class="js-mega-menu navbar navbar-expand-lg">
+          <div class="navbar-nav-wrap">
+            <!-- Secondary Content -->
+            <div class="navbar-nav-wrap-content">
+            <!-- Account -->
+              <div class="hs-unfold">
+                <a class="js-hs-unfold-invoker rounded-circle" href="javascript:;"
+                   data-hs-unfold-options='{
+                    "target": "#accountDropdown",
+                    "type": "css-animation",
+                    "event": "hover",
+                    "duration": 50,
+                    "delay": 0,
+                    "hideOnScroll": "true"
+                   }'>
+                  <span class="avatar avatar-xs avatar-circle">
+                    <img class="avatar-img" src="{% static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">
+                  </span>
+                </a>
+
+                <div id="accountDropdown" class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0" style="min-width: 245px;">
+                  <div class="card">
+                    <!-- Header -->
+                    <div class="card-header p-4">
+                      <a class="media align-items-center" href="#">
+                        <div class="avatar mr-3">
+                          <img class="avatar-img" src="{% static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">
+                        </div>
+                        <div class="media-body">
+                          <span class="d-block font-weight-bold">Nataly Gaga <span class="badge badge-success ml-1">Pro</span></span>
+                          <span class="d-block small text-muted">natalygaga@gmail.com</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- End Header -->
+
+                    <!-- Body -->
+                    <div class="card-body py-3">
+                      <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-comments"></i>
+                        </span>
+                        Messages
+                      </a>
+                      <a class="dropdown-item d-lg-none" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-tasks"></i>
+                        </span>
+                        My Products
+                      </a>
+                      <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-database"></i>
+                        </span>
+                        Purchase history
+                      </a>
+                      <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-user"></i>
+                        </span>
+                        Account
+                      </a>
+                      <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-credit-card"></i>
+                        </span>
+                        Payment methods
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+
+                      <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-question-circle"></i>
+                        </span>
+                        Help
+                      </a>
+                      <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-power-off"></i>
+                        </span>
+                        Log out
+                      </a>
+                    </div>
+                    <!-- End Body -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Account -->
+            </div>
+            <!-- End Secondary Content -->
+
+            <!-- Responsive Toggle Button -->
+            <button type="button" class="navbar-toggler navbar-nav-wrap-navbar-toggler btn btn-icon btn-sm rounded-circle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false"
+                    aria-controls="navBar"
+                    data-toggle="collapse"
+                    data-target="#navBar">
+              <span class="navbar-toggler-default">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+                </svg>
+              </span>
+              <span class="navbar-toggler-toggled">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                </svg>
+              </span>
+            </button>
+            <!-- End Responsive Toggle Button -->
+          </div>
+        </nav>
+        <!-- End Nav -->
+      </div>
+    </div>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Profile Section -->
+    <div class="container space-top-1 space-top-sm-2 space-bottom-2">
+      <div class="row">
+        <div id="stickyBlockStartPoint" class="col-md-5 col-lg-4 mb-7 mb-md-0">
+          <div class="js-sticky-block card border p-4"
+               data-hs-sticky-block-options='{
+                 "parentSelector": "#stickyBlockStartPoint",
+                 "breakpoint": "md",
+                 "startPoint": "#stickyBlockStartPoint",
+                 "endPoint": "#stickyBlockEndPoint",
+                 "stickyOffsetTop": 12,
+                 "stickyOffsetBottom": 12
+               }'>
+            <div class="text-center">
+              <!-- User Content {% static 'assets/img/160x160/img2.jpg' %}-->
+              <img class="img-fluid rounded-circle mx-auto" src="{{ user.profile.profile_pic.url }}" alt="Image Description" width="120" height="120">
+
+              <span class="d-block text-body font-size-1 mt-3">Joined in {{ user.date_joined }}</span>
+
+              <div class="mt-3">
+                <a class="btn btn-sm btn-outline-primary transition-3d-hover" href="#">
+                  <i class="far fa-envelope mr-2"></i>
+                  Send Message
+                </a>
+              </div>
+              <!-- End User Content -->
+            </div>
+
+            <div class="border-top pt-4 mt-4">
+              <div class="row">
+                <div class="col-6 col-md-12 col-lg-6 mb-4">
+                  <!-- Icon Block -->
+                  <div class="media">
+                    <div class="d-flex">
+                      <span class="avatar avatar-xs mr-3">
+                        <img class="avatar-img" src="{% static 'assets/svg/illustrations/review-rating-shield.svg' %}" alt="Image Description">
+                      </span>
+                      <span class="text-body font-size-1 mt-1">533 Reviews</span>
+                    </div>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-6 col-md-12 col-lg-6 mb-4">
+                  <!-- Icon Block -->
+                  <div class="d-flex">
+                    <span class="avatar avatar-xs mr-3">
+                      <img class="avatar-img" src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Image Description">
+                    </span>
+                    <span class="text-body font-size-1 mt-1">4.87 rating</span>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-6 col-md-12 col-lg-6 mb-4 col-6 col-md-12 mb-lg-0">
+                  <!-- Icon Block -->
+                  <div class="d-flex">
+                    <span class="avatar avatar-xs mr-3">
+                      <img class="avatar-img" src="{% static 'assets/svg/illustrations/medal.svg' %}" alt="Image Description">
+                    </span>
+                    <span class="text-body font-size-1 mt-1">Top barter</span>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-6 col-md-12 col-lg-6">
+                  <!-- Icon Block -->
+                  <div class="d-flex">
+                    <span class="avatar avatar-xs mr-3">
+                      <img class="avatar-img" src="{% static 'assets/svg/illustrations/add-file.svg' %}" alt="Image Description">
+                    </span>
+                    <span class="text-body font-size-1 mt-1">29 products</span>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+              </div>
+            </div>
+
+            <div class="border-top pt-4 mt-4">
+{#              <h1 class="h4 mb-4">Connected accounts</h1>#}
+{##}
+{#              <div class="row">#}
+{#                <div class="col-6 col-md-12 col-lg-6 mb-4">#}
+{#                </div>#}
+{##}
+{#                <div class="col-6 col-md-12 col-lg-6 mb-4">#}
+{#                  <!-- Social Profiles -->#}
+{#                  <a class="media" href="#">#}
+{#                    <div class="icon icon-xs icon-soft-secondary mr-3">#}
+{#                      <i class="fab fa-slack"></i>#}
+{#                    </div>#}
+{#                    <div class="media-body">#}
+{#                      <span class="d-block font-size-1 font-weight-bold">Slack</span>#}
+{#                      <small class="d-block text-body">4.5k followers</small>#}
+{#                    </div>#}
+{#                  </a>#}
+{#                  <!-- End Social Profiles -->#}
+{#                </div>#}
+{##}
+{#                <div class="col-6 col-md-12 col-lg-6 mb-0 mb-md-4 mb-lg-0">#}
+{#                  <!-- Social Profiles -->#}
+{#                  <a class="media" href="#">#}
+{#                    <div class="icon icon-xs icon-soft-secondary mr-3">#}
+{#                      <i class="fab fa-twitter"></i>#}
+{#                    </div>#}
+{#                    <div class="media-body">#}
+{#                      <span class="d-block font-size-1 font-weight-bold">Twitter</span>#}
+{#                      <small class="d-block text-body">2.7k followers</small>#}
+{#                    </div>#}
+{#                  </a>#}
+{#                  <!-- End Social Profiles -->#}
+{#                </div>#}
+{##}
+{#                <div class="col-6 col-md-12 col-lg-6">#}
+{#                  <!-- Social Profiles -->#}
+{#                  <a class="media" href="#">#}
+{#                    <div class="icon icon-xs icon-soft-secondary mr-3">#}
+{#                      <i class="fab fa-facebook-f"></i>#}
+{#                    </div>#}
+{#                    <div class="media-body">#}
+{#                      <span class="d-block font-size-1 font-weight-bold">Facebook</span>#}
+{#                      <small class="d-block text-body">3k followers</small>#}
+{#                    </div>#}
+{#                  </a>#}
+{#                  <!-- End Social Profiles -->#}
+{#                </div>#}
+{#              </div>#}
+            </div>
+
+{#              BIO #}
+              <span>{{ user.profile.bio|slice:30 }}</span>
+            <!-- Read More - Collapse -->
+            <div class="collapse" id="collapseDescriptionSection">
+              {{ user.profile.bio|slice:"30:" }}
+            </div>
+            <!-- End Read More - Collapse -->
+{#             END BIO#}
+
+            <!-- Link -->
+            <a class="link link-collapse small font-size-1 font-weight-bold" data-toggle="collapse" href="#collapseDescriptionSection" role="button" aria-expanded="false" aria-controls="collapseDescriptionSection">
+              <span class="link-collapse-default">Read more</span>
+              <span class="link-collapse-active">Read less</span>
+              <span class="link-icon ml-1">+</span>
+            </a>
+
+            <div class="border-top text-center pt-4 mt-4">
+              <a class="text-body small" href="#">
+                <i class="far fa-flag mr-1"></i> Report this author
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-7 col-lg-8 ">
+          <div class="ml-lg-2">
+
+            <!-- Nav Classic -->
+            <ul class="nav nav-classic nav-rounded nav-justified border" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold active" id="pills-one-example1-tab" data-toggle="pill" href="#pills-one-example1" role="tab" aria-controls="pills-one-example1" aria-selected="true">
+                  <div class="d-md-flex justify-content-md-center align-items-md-center">
+                    <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
+                      <img class="img-fluid" src="{%  static  'assets/svg/icons/icon-24.svg' %}" alt="SVG">
+                    </figure>
+                    Products
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold" id="pills-two-example1-tab" data-toggle="pill" href="#pills-two-example1" role="tab" aria-controls="pills-two-example1" aria-selected="false">
+                  <div class="d-md-flex justify-content-md-center align-items-md-center">
+                    <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
+                      <img class="img-fluid" src="{%  static  'assets/svg/icons/icon-27.svg' %}" alt="SVG">
+                    </figure>
+                    Messages
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold" id="pills-three-example1-tab" data-toggle="pill" href="#pills-three-example1" role="tab" aria-controls="pills-three-example1" aria-selected="false">
+                  <div class="d-md-flex justify-content-md-center align-items-md-center">
+                    <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
+                      <img class="img-fluid" src="{%  static  'assets/svg/icons/icon-22.svg' %}" alt="SVG">
+                    </figure>
+                    Settings
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav Classic -->
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade pt-6 show active" id="pills-one-example1" role="tabpanel" aria-labelledby="pills-one-example1-tab">
+            <!-- Courses -->
+            <div class="pt-2 mt-5">
+              <h3 class="mb-4">{{ user.username }}'s products</h3>
+
+                {% for product in user.products.all %}
+              <!-- Course -->
+              <div class=" border-top pt-3 mt-3 ">
+                <a class="card shadow-none" href="{{ product.get_absolute_url }}">
+                  <div class="card-body p-0">
+                    <div class="row">
+                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
+                      </div>
+                      <div class="col-sm-7 col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-6 mb-2 mb-lg-0">
+                            <h5 class="text-hover-primary">{{product.title}}</h5>
+                            <div class="d-flex align-items-center flex-wrap">
+                              <ul class="list-inline mt-n1 mb-0 mr-2">
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                              </ul>
+                              <span class="d-inline-block">
+                                <span class="text-dark font-size-1 mr-1">4.95</span>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="small text-muted mb-2">
+                                  <i class="fas fa-book-reader mr-1"></i>
+                                  {{ total_views }} views
+                                </div>
+                                <div class="small text-muted">
+                                  <i class="fas fa-clock mr-1"></i>
+                                  Listed on: {{ product.created_at }}
+                                    {{ ip }}
+                                </div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
+                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- End Course -->
+                {% endfor %}
+<!-- Course -->
+              <div class=" border-top pt-3 mt-3 ">
+                <a class="card shadow-none" href="#">
+                  <div class="card-body p-0">
+                    <div class="row">
+                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
+                      </div>
+                      <div class="col-sm-7 col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-6 mb-2 mb-lg-0">
+                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
+                            <div class="d-flex align-items-center flex-wrap">
+                              <ul class="list-inline mt-n1 mb-0 mr-2">
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                              </ul>
+                              <span class="d-inline-block">
+                                <span class="text-dark font-size-1 mr-1">4.95</span>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="small text-muted mb-2">
+                                  <i class="fas fa-book-reader mr-1"></i>
+                                  10 lessons
+                                </div>
+                                <div class="small text-muted">
+                                  <i class="fas fa-clock mr-1"></i>
+                                  3h 25m
+                                </div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
+                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- End Course --><!-- Course -->
+              <div class=" border-top pt-3 mt-3 ">
+                <a class="card shadow-none" href="#">
+                  <div class="card-body p-0">
+                    <div class="row">
+                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
+                      </div>
+                      <div class="col-sm-7 col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-6 mb-2 mb-lg-0">
+                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
+                            <div class="d-flex align-items-center flex-wrap">
+                              <ul class="list-inline mt-n1 mb-0 mr-2">
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                              </ul>
+                              <span class="d-inline-block">
+                                <span class="text-dark font-size-1 mr-1">4.95</span>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="small text-muted mb-2">
+                                  <i class="fas fa-book-reader mr-1"></i>
+                                  10 lessons
+                                </div>
+                                <div class="small text-muted">
+                                  <i class="fas fa-clock mr-1"></i>
+                                  3h 25m
+                                </div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
+                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- End Course -->
+
+              <div class="text-right font-size-1 mt-6">
+                <a class="font-weight-bold" href="courses-listing.html">See all Courses <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              </div>
+            </div>
+            <!-- End Courses -->
+              </div>
+
+              <div class="tab-pane fade pt-6" id="pills-two-example1" role="tabpanel" aria-labelledby="pills-two-example1-tab">
+                <!-- Review Header -->
+                <div class="d-sm-flex justify-content-sm-between align-items-sm-center border-bottom pb-3 mb-4">
+                  <div class="d-flex align-items-center mb-2 mb-sm-0">
+                    <h4 class="mb-0">Reviews <small class="text-muted ml-1">(156)</small></h4>
+                  </div>
+
+                  <!-- Select -->
+                  <select class="js-selectpicker dropdown-select"
+                          data-hs-selectpicker-options='{
+                          "width": "fit",
+                          "style": "btn-soft-secondary btn-xs"
+                        }'>
+                    <option value="showCategoryByFilterSelect1" selected>Newest first</option>
+                    <option value="showCategoryByFilterSelect2">Highest rated</option>
+                    <option value="showCategoryByFilterSelect3">Lowest rated</option>
+                  </select>
+                  <!-- End Select -->
+                </div>
+                <!-- End Review Header -->
+
+                <!-- Review -->
+                <div class="media">
+                  <div class="avatar avatar-circle mr-3">
+                    <img class="avatar-img" src="{%  static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">
+                  </div>
+                  <div class="media-body border-bottom pb-6 mb-6">
+                    <span class="h4">Christina Kray</span>
+
+                    <p>Just started using Front for Google Drive, and finding it to serve all my needs and it integrates perfectly with Front! Sharing diagrams is now much easier for our team.</p>
+
+                    <small class="text-body mr-2">Was this review helpful?</small>
+                    <a class="small mr-2" href="javascript:;">Yes</a>
+                    <a class="small" href="javascript:;">No</a>
+
+                    <!-- Reply -->
+                    <div class="card bg-light shadow-none p-3 mt-4">
+                      <div class="media">
+                        <div class="avatar mr-3">
+                          <img class="avatar-img" src="{%  static 'assets/img/160x160/img23.png' %}" alt="Image Description">
+                        </div>
+                        <div class="media-body">
+                          <span class="d-block text-dark font-weight-bold">Google Drive</span>
+                          <p>Thanks for the review Maria! Let us know if you ever need anything.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Reply -->
+                  </div>
+                </div>
+                <!-- End Review -->
+
+                <!-- Review -->
+                <div class="media">
+                  <div class="avatar avatar-circle mr-3">
+                    <img class="avatar-img" src="{%  static 'assets/img/100x100/img3.jpg' %}" alt="Image Description">
+                  </div>
+                  <div class="media-body border-bottom pb-6 mb-6">
+                    <span class="h4">Dave Austin</span>
+
+                    <p>This is a pretty cool integration. It is fun and easy to use. I had to make a few sharing for work and Gliffy helped me get the job done. If I had a tablet or touch screen, I would use this more.</p>
+
+                    <small class="text-body mr-2">Was this review helpful?</small>
+                    <a class="small mr-2" href="javascript:;">Yes</a>
+                    <a class="small" href="javascript:;">No</a>
+
+                    <!-- Reply -->
+                    <div class="card bg-light shadow-none p-3 mt-4">
+                      <div class="media">
+                        <div class="avatar mr-3">
+                          <img class="avatar-img" src="{%  static 'assets/img/160x160/img23.png' %}" alt="Image Description">
+                        </div>
+                        <div class="media-body">
+                          <span class="d-block text-dark font-weight-bold">Google Drive</span>
+                          <p>Love it Dave! We're all about keeping it fun and easy.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Reply -->
+                  </div>
+                </div>
+                <!-- End Review -->
+
+                <!-- Review -->
+                <div class="media">
+                  <div class="avatar avatar-circle mr-3">
+                    <img class="avatar-img" src="{%  static 'assets/img/100x100/img11.jpg' %}" alt="Image Description">
+                  </div>
+                  <div class="media-body border-bottom pb-6 mb-6">
+                    <span class="h4">Nika Mundada</span>
+
+                    <p>I love Google Drive! It's super easy to get started and works great with Front pages.</p>
+
+                    <small class="text-body mr-2">Was this review helpful?</small>
+                    <a class="small mr-2" href="javascript:;">Yes</a>
+                    <a class="small" href="javascript:;">No</a>
+
+                    <!-- Reply -->
+                    <div class="card bg-light shadow-none p-3 mt-4">
+                      <div class="media">
+                        <div class="avatar mr-3">
+                          <img class="avatar-img" src="{%  static 'assets/img/160x160/img23.png' %}" alt="Image Description">
+                        </div>
+                        <div class="media-body">
+                          <span class="d-block text-dark font-weight-bold">Google Drive</span>
+                          <p>Thanks for the feedback Nika!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Reply -->
+                  </div>
+                </div>
+                <!-- End Review -->
+
+                <div class="text-center">
+                  <a class="font-weight-bold" href="#">Read More Reviews <i class="fas fa-angle-right ml-1"></i></a>
+                </div>
+              </div>
+
+              <div class="tab-pane fade pt-6" id="pills-three-example1" role="tabpanel" aria-labelledby="pills-three-example1-tab">
+                <h4 class="mb-3">Shipping Address</h4>
+
+                <!-- Address -->
+                <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
+                  <input type="radio" id="pricingRadio1" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input" checked>
+                  <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio1">
+                    <span class="row">
+                        <form>
+                          <div class="form-group">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                          </div>
+                          <div class="form-group">
+                            <label for="inputAddress2">Address 2</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputCity">City</label>
+                              <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="inputState">State</label>
+                              <select id="inputState" class="form-control">
+                                  <option value="" selected="selected">Select a State</option>
+                                  <option value="AL">Alabama</option>
+                                  <option value="AK">Alaska</option>
+                                  <option value="AZ">Arizona</option>
+                                  <option value="AR">Arkansas</option>
+                                  <option value="CA">California</option>
+                                  <option value="CO">Colorado</option>
+                                  <option value="CT">Connecticut</option>
+                                  <option value="DE">Delaware</option>
+                                  <option value="DC">District Of Columbia</option>
+                                  <option value="FL">Florida</option>
+                                  <option value="GA">Georgia</option>
+                                  <option value="HI">Hawaii</option>
+                                  <option value="ID">Idaho</option>
+                                  <option value="IL">Illinois</option>
+                                  <option value="IN">Indiana</option>
+                                  <option value="IA">Iowa</option>
+                                  <option value="KS">Kansas</option>
+                                  <option value="KY">Kentucky</option>
+                                  <option value="LA">Louisiana</option>
+                                  <option value="ME">Maine</option>
+                                  <option value="MD">Maryland</option>
+                                  <option value="MA">Massachusetts</option>
+                                  <option value="MI">Michigan</option>
+                                  <option value="MN">Minnesota</option>
+                                  <option value="MS">Mississippi</option>
+                                  <option value="MO">Missouri</option>
+                                  <option value="MT">Montana</option>
+                                  <option value="NE">Nebraska</option>
+                                  <option value="NV">Nevada</option>
+                                  <option value="NH">New Hampshire</option>
+                                  <option value="NJ">New Jersey</option>
+                                  <option value="NM">New Mexico</option>
+                                  <option value="NY">New York</option>
+                                  <option value="NC">North Carolina</option>
+                                  <option value="ND">North Dakota</option>
+                                  <option value="OH">Ohio</option>
+                                  <option value="OK">Oklahoma</option>
+                                  <option value="OR">Oregon</option>
+                                  <option value="PA">Pennsylvania</option>
+                                  <option value="RI">Rhode Island</option>
+                                  <option value="SC">South Carolina</option>
+                                  <option value="SD">South Dakota</option>
+                                  <option value="TN">Tennessee</option>
+                                  <option value="TX">Texas</option>
+                                  <option value="UT">Utah</option>
+                                  <option value="VT">Vermont</option>
+                                  <option value="VA">Virginia</option>
+                                  <option value="WA">Washington</option>
+                                  <option value="WV">West Virginia</option>
+                                  <option value="WI">Wisconsin</option>
+                                  <option value="WY">Wyoming</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <label for="inputZip">Zip</label>
+                              <input type="text" class="form-control" id="inputZip">
+                            </div>
+                          </div>
+                            <button type="submit" class="btn btn-soft-primary transition-3d-hover float-right">{% trans 'Update Address' %}</button>
+                        </form>
+                    </span>
+                  </label>
+                </div>
+                <!-- End Address -->
+
+                <!-- Username -->
+              <h4 class="mb-3">Update Username</h4>
+                <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
+                  <input type="radio" id="pricingRadio2" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
+                  <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio2">
+                  <form class="align-items-center" method="POST" action="{% url 'account_reset_password' %}">
+                      {% csrf_token %}
+                    <div class="input-group mb-3 form-group">
+                      <input type="text" class="form-control w-100" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button type="submit" class="btn btn-soft-primary transition-3d-hover float-right">{% trans 'Update Username' %}</button>
+                      </div>
+                    </div>
+                  </form>
+                  </label>
+                </div>
+                <!-- End Username -->
+
+                <!-- Confirm Email -->
+                <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
+                  <input type="radio" id="pricingRadio3" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
+                  <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio3">
+                    <span class="row">
+                      <span class="col-sm-3 order-sm-2 text-sm-right mb-3 mb-sm-0">
+                        <span class="d-block mb-2">
+                          <span class="text-primary font-weight-bold align-top">$</span>
+                          <span class="font-size-3 text-primary font-weight-bold">99</span>
+                          <span class="font-size-1">/ mo</span>
+                        </span>
+                      </span>
+                      <span class="col-sm-9 order-sm-1">
+                        <span class="d-block h3 mb-1">Enterprise</span>
+                        <span class="d-block">100TB storage in enterprise accounts</span>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+                <!-- End Confirm Email -->
+
+                <div class="text-center mt-5">
+                  <div class="mb-5">
+                    <p class="font-size-1">Need 100TB+ storage? <a class="font-weight-bold" href="#">Contact us for custom pricing</a></p>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-wide transition-3d-hover">Submit</button>
+                </div>
+              </div>
+            </div>
+            <!-- End Tab Content -->
+{#If user is not logged in then the settings tab displays reviews for this user #}
+
+        <div class="col-md-7 col-lg-8">
+          <div class="ml-lg-6">
+            <div class="mb-3 mb-sm-0 mr-2">
+              <h2>{{user.username}} yjuytuty</h2>
+            </div>
+         </div>
+        </div>
+      </div>
+
+            <p>{{ user.profile.bio }}</p>
+
+            <!-- Read More - Collapse -->
+            <div class="collapse" id="collapseDescriptionSection">
+              <p>{{ user.profile.bio }}</p>
+            </div>
+            <!-- End Read More - Collapse -->
+
+            <!-- Link -->
+            <a class="link link-collapse small font-size-1 font-weight-bold" data-toggle="collapse" href="#collapseDescriptionSection" role="button" aria-expanded="false" aria-controls="collapseDescriptionSection">
+              <span class="link-collapse-default">Read more</span>
+              <span class="link-collapse-active">Read less</span>
+              <span class="link-icon ml-1">+</span>
+            </a>
+            <!-- End Link -->
+
+            <!-- Courses -->
+            <div class="border-top pt-5 mt-5">
+              <h3 class="mb-4">Products from {{ user.username }}</h3>
+
+              <!-- Course -->
+              <div class=" border-top pt-3 mt-3 ">
+                <a class="card shadow-none" href="#">
+                  <div class="card-body p-0">
+                    <div class="row">
+                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
+                      </div>
+                      <div class="col-sm-7 col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-6 mb-2 mb-lg-0">
+                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
+                            <div class="d-flex align-items-center flex-wrap">
+                              <ul class="list-inline mt-n1 mb-0 mr-2">
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                              </ul>
+                              <span class="d-inline-block">
+                                <span class="text-dark font-size-1 mr-1">4.95</span>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="small text-muted mb-2">
+                                  <i class="fas fa-book-reader mr-1"></i>
+                                  10 lessons
+                                </div>
+                                <div class="small text-muted">
+                                  <i class="fas fa-clock mr-1"></i>
+                                  3h 25m
+                                </div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
+                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- End Course -->
+<!-- Course -->
+              <div class=" border-top pt-3 mt-3 ">
+                <a class="card shadow-none" href="#">
+                  <div class="card-body p-0">
+                    <div class="row">
+                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
+                      </div>
+                      <div class="col-sm-7 col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-6 mb-2 mb-lg-0">
+                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
+                            <div class="d-flex align-items-center flex-wrap">
+                              <ul class="list-inline mt-n1 mb-0 mr-2">
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                              </ul>
+                              <span class="d-inline-block">
+                                <span class="text-dark font-size-1 mr-1">4.95</span>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="small text-muted mb-2">
+                                  <i class="fas fa-book-reader mr-1"></i>
+                                  10 lessons
+                                </div>
+                                <div class="small text-muted">
+                                  <i class="fas fa-clock mr-1"></i>
+                                  3h 25m
+                                </div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
+                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- End Course --><!-- Course -->
+              <div class=" border-top pt-3 mt-3 ">
+                <a class="card shadow-none" href="#">
+                  <div class="card-body p-0">
+                    <div class="row">
+                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
+                      </div>
+                      <div class="col-sm-7 col-lg-9">
+                        <div class="row">
+                          <div class="col-lg-6 mb-2 mb-lg-0">
+                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
+                            <div class="d-flex align-items-center flex-wrap">
+                              <ul class="list-inline mt-n1 mb-0 mr-2">
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                              </ul>
+                              <span class="d-inline-block">
+                                <span class="text-dark font-size-1 mr-1">4.95</span>
+                              </span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                            <div class="row">
+                              <div class="col-7">
+                                <div class="small text-muted mb-2">
+                                  <i class="fas fa-book-reader mr-1"></i>
+                                  10 lessons
+                                </div>
+                                <div class="small text-muted">
+                                  <i class="fas fa-clock mr-1"></i>
+                                  3h 25m
+                                </div>
+                              </div>
+                              <div class="col-5 text-right">
+                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
+                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- End Course -->
+
+              <div class="text-right font-size-1 mt-6">
+                <a class="font-weight-bold" href="courses-listing.html">See all Courses <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              </div>
+            </div>
+            <!-- End Courses -->
+
+            <!-- Courses -->
+            <div class="border-top pt-5 mt-5">
+              <h3 class="h5 mb-4">Nataly's books</h3>
+
+              <div class="row mx-n2 mx-lg-n3">
+                <!-- Article -->
+                <article class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0">
+                  <a class="card bg-img-hero w-100 min-h-270rem transition-3d-hover" href="course-description.html" style="background-image: url({% static 'assets/img/400x500/img13.jpg' %});">
+                    <div class="card-body">
+                      <span class="d-block small text-white-70 font-weight-bold text-cap mb-2">Phython</span>
+                      <h3 class="text-white">What's new in Phython 3.7.2</h3>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent pt-0">
+                      <span class="text-white font-size-1 font-weight-bold">Read now</span>
+                    </div>
+                  </a>
+                </article>
+                <!-- End Article -->
+
+                <!-- Article -->
+                <article class="col-sm-6 col-lg-4 px-2 px-lg-3 mb-3 mb-lg-0">
+                  <a class="card bg-img-hero w-100 min-h-270rem transition-3d-hover" href="course-description.html" style="background-image: url({% static 'assets/img/400x500/img15.jpg' %});">
+                    <div class="card-body">
+                      <span class="d-block small text-white-70 font-weight-bold text-cap mb-2">Tooling</span>
+                      <h3 class="text-white">Build a staging server</h3>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent pt-0">
+                      <span class="text-white font-size-1 font-weight-bold">Read now</span>
+                    </div>
+                  </a>
+                </article>
+                <!-- End Article -->
+
+                <!-- Article -->
+                <article class="col-md-6 col-lg-4 px-2 px-lg-3">
+                  <a class="card bg-img-hero w-100 min-h-270rem transition-3d-hover" href="course-description.html" style="background-image: url({% static 'assets/img/400x500/img17.jpg' %});">
+                    <div class="card-body">
+                      <span class="d-block small text-white-70 font-weight-bold text-cap mb-2">Popular</span>
+                      <h3 class="text-white">Artificial Intelligence</h3>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent pt-0">
+                      <span class="text-white font-size-1 font-weight-bold">Read now</span>
+                    </div>
+                  </a>
+                </article>
+                <!-- End Article -->
+              </div>
+            </div>
+            <!-- End Courses -->
+
+            <!-- Sticky Block End Point -->
+            <div id="stickyBlockEndPoint"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Profile Section -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+{% endblock content %}

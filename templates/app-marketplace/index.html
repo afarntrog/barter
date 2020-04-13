@@ -1,0 +1,373 @@
+{% extends 'base.html' %}
+{% load static %}
+  {% block content %}
+  <!-- ========== MAIN CONTENT ========== -->
+      <!-- Hero Section -->
+      <div class="container space-top-1 space-top-md-2 space-bottom-2">
+          <div class="row align-items-lg-center">
+              <div class="col-lg-5 mb-7 mb-lg-0">
+                  <div class="mb-4">
+                      <h1>Add items to Barter</h1>
+                      <p>Exchange items you don't want for items you do want!</p>
+                  </div>
+
+                  <!-- Search Form -->
+                  <form class="js-validate d-flex align-items-center">
+                      <label class="sr-only" for="signupSrEmail">Search for apps</label>
+                      <div class="d-inline-block w-75 mr-2">
+                          <input type="email" class="form-control" name="email" id="signupSrEmail" placeholder="Search for apps" aria-label="Search for apps">
+                      </div>
+                      <button type="submit" class="btn btn-primary">
+                          <span class="fas fa-search"></span>
+                      </button>
+                  </form>
+                  <!-- End Search Form -->
+              </div>
+
+              <div class="col-lg-7">
+                  <img class="img-fluid" src="{% static 'assets/svg/illustrations/we-are-in-office-1.svg' %}" alt="Image Descriptio">
+              </div>
+          </div>
+      </div>
+      <!-- End Hero Section -->
+
+      <!-- Apps Section -->
+      <div class="container space-bottom-2 space-bottom-lg-3">
+      <div class="row">
+          <div class="col-lg-3 mb-5 mb-lg-0">
+              <div class="mr-lg-3">
+                  <!-- Navbar -->
+                  <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+                      <!-- Responsive Toggle Button -->
+                      <button type="button" class="navbar-toggler btn btn-block border py-3"
+                              aria-label="Toggle navigation"
+                              aria-expanded="false"
+                              aria-controls="sidebarNav"
+                              data-toggle="collapse"
+                              data-target="#sidebarNav">
+                <span class="d-flex justify-content-between align-items-center">
+                  <span class="h5 mb-0">View all categories</span>
+                  <span class="navbar-toggler-default">
+                    <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+                    </svg>
+                  </span>
+                  <span class="navbar-toggler-toggled">
+                    <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                    </svg>
+                  </span>
+                </span>
+                      </button>
+                      <!-- End Responsive Toggle Button -->
+
+                      <div id="sidebarNav" class="collapse navbar-collapse">
+                          <div class="p-2 p-lg-0">
+                              <div class="mt-3 mt-lg-0">
+                                  <h2 class="h4">Explore</h2>
+
+                                  <!-- Nav Link -->
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      All
+                                      <span class="badge border badge-pill">30+</span>
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Top rated
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Featured
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Daily tools
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      New
+                                      <span class="badge border badge-pill">18</span>
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Channels
+                                  </a>
+                                  <!-- End Nav Link -->
+                              </div>
+
+                              <div class="mt-5">
+                                  <h3 class="h4">Categories</h3>
+
+                                  <!-- Nav Link -->
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      API management
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Code quality
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Code review
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Integration
+                                      <span class="badge border badge-pill">4</span>
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      File management
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Mobile
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Monitoring
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Publishing
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Security
+                                      <span class="badge border badge-pill">20</span>
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      File management
+                                      <span class="badge border badge-pill">1</span>
+                                  </a>
+                                  <!-- End Nav Link -->
+                              </div>
+
+                              <div class="mt-5">
+                                  <h3 class="h4">Filters</h3>
+
+                                  <!-- Nav Link -->
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Free
+                                      <span class="badge border badge-pill">9+</span>
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Free trial
+                                  </a>
+                                  <!-- End Nav Link -->
+                              </div>
+
+                              <div class="mt-5">
+                                  <h3 class="h4">Verification</h3>
+
+                                  <!-- Nav Link -->
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Verified
+                                  </a>
+                                  <a class="dropdown-item d-flex justify-content-between align-items-center px-0" href="#">
+                                      Unverified
+                                  </a>
+                                  <!-- End Nav Link -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- End Navbar -->
+              </div>
+          </div>
+
+          <div class="col-lg-9 column-divider-lg">
+              <div class="ml-lg-2">
+                  <div class="row mx-n2 mb-7">
+                      <div class="col-sm-6 col-md-4 px-2 mb-3 mb-md-0">
+                          <!-- Card -->
+                          <a class="card card-frame h-100" href="app-description.html">
+                              <img class="card-img-top" src="{% static 'assets/img/480x220/img1.jpg' %}" alt="Image Description">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-center mb-1">
+                                      <span class="d-block text-dark font-weight-bold">Aircall</span>
+                                      <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                  </div>
+                                  <span class="d-block text-body font-size-1">Deliver call activity and voicemails straight to your inbox</span>
+                              </div>
+                          </a>
+                          <!-- End Card -->
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 px-2 mb-3 mb-md-0">
+                          <!-- Card -->
+                          <a class="card card-frame h-100" href="app-description.html">
+                              <img class="card-img-top" src="{% static 'assets/img/480x220/img2.jpg' %}" alt="Image Description">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-center mb-1">
+                                      <span class="d-block text-dark font-weight-bold">Google</span>
+                                      <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                  </div>
+                                  <span class="d-block text-body font-size-1">Multinational technology company that specializes in Internet-related services</span>
+                              </div>
+                          </a>
+                          <!-- End Card -->
+                      </div>
+
+                      <div class="col-sm-6 col-md-4 px-2">
+                          <!-- Card -->
+                          <a class="card card-frame h-100" href="app-description.html">
+                              <img class="card-img-top" src="{% static 'assets/img/480x220/img3.jpg' %}" alt="Image Description">
+                              <div class="card-body">
+                                  <div class="d-flex align-items-center mb-1">
+                                      <span class="d-block text-dark font-weight-bold">Slack</span>
+                                      <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                  </div>
+                                  <span class="d-block text-body font-size-1">Email collaboration and email service desk made easy</span>
+                              </div>
+                          </a>
+                          <!-- End Card -->
+                      </div>
+                  </div>
+
+                  <!-- Title -->
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h3 class="mb-0">Featured</h3>
+                      <a class="font-size-1 font-weight-bold" href="#">View All <i class='fas fa-angle-right fa-sm ml-1'></i></a>
+                  </div>
+                  <!-- End Title -->
+
+                  <div class="row mx-n2 mb-7">
+                      {% for i in n %}
+                          <!-- Card -->
+                          <div class="col-sm-6 col-md-4 px-2 mb-3">
+                              <div class="card card-frame h-100">
+                                  <a class="card-body" href="app-description.html">
+                                      <div class="media">
+                                          <div class="avatar avatar-xs mt-1 mr-3">
+                                              <img class="avatar-img" src="{% static 'assets/img/160x160/img5.jpg' %}" alt="Image Description">
+                                          </div>
+                                          <div class="media-body">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="d-block text-dark font-weight-bold">Spotify</span>
+                                                  <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                              </div>
+                                              <small class="d-block text-body">Entertainment</small>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                          <!-- End Card -->
+                      {% endfor %}
+                  </div>
+
+                  <!-- Title -->
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h3 class="mb-0">Daily tools</h3>
+                      <a class="font-size-1 font-weight-bold" href="#">View All <i class='fas fa-angle-right fa-sm ml-1'></i></a>
+                  </div>
+                  <!-- End Title -->
+
+                  <div class="row mx-n2 mb-7">
+
+                      {% for i in n %}
+                          <!-- Card -->
+                          <div class="col-sm-6 col-md-4 px-2 mb-3">
+                              <div class="card card-frame h-100">
+                                  <a class="card-body" href="app-description.html">
+                                      <div class="media">
+                                          <div class="avatar avatar-xs mt-1 mr-3">
+                                              <img class="avatar-img" src="{% static 'assets/img/160x160/img24.png' %}" alt="Image Description">
+                                          </div>
+                                          <div class="media-body">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="d-block text-dark font-weight-bold">Google Calendar</span>
+                                                  <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                              </div>
+                                              <small class="d-block text-body">Office management</small>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                          <!-- End Card -->
+                      {% endfor %}
+
+
+                  </div>
+
+                  <!-- Title -->
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h3 class="mb-0">New</h3>
+                      <a class="font-size-1 font-weight-bold" href="#">View All <i class='fas fa-angle-right fa-sm ml-1'></i></a>
+                  </div>
+                  <!-- End Title -->
+
+                  <div class="row mx-n2 mb-7">
+
+                      {% for i in n %}
+                          <!-- Card -->
+                          <div class="col-sm-6 col-md-4 px-2 mb-3">
+                              <div class="card card-frame h-100">
+                                  <a class="card-body" href="app-description.html">
+                                      <div class="media">
+                                          <div class="avatar avatar-xs mt-1 mr-3">
+                                              <img class="avatar-img" src="{% static 'assets/img/160x160/img24.png' %}" alt="Image Description">
+                                          </div>
+                                          <div class="media-body">
+                                              <div class="d-flex align-items-center">
+                                                  <span class="d-block text-dark font-weight-bold">Google Calendar</span>
+                                                  <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                              </div>
+                                              <small class="d-block text-body">Office management</small>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                          <!-- End Card -->
+                      {% endfor %}
+                  </div>
+
+                      <!-- Title -->
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                          <h3 class="mb-0">Channels</h3>
+                          <a class="font-size-1 font-weight-bold" href="#">View All <i class='fas fa-angle-right fa-sm ml-1'></i></a>
+                      </div>
+                      <!-- End Title -->
+
+                      <div class="row mx-n2">
+                          {% for i in t %}
+                              <!-- Card -->
+                              <div class="col-sm-6 col-md-4 px-2 mb-3">
+                                  <div class="card card-frame h-100">
+                                      <a class="card-body" href="app-description.html">
+                                          <div class="media">
+                                              <div class="avatar avatar-xs mt-1 mr-3">
+                                                  <img class="avatar-img" src="{% static 'assets/img/160x160/img4.jpg' %}" alt="Image Description">
+                                              </div>
+                                              <div class="media-body">
+                                                  <div class="d-flex align-items-center">
+                                                      <span class="d-block text-dark font-weight-bold">Mapbox</span>
+                                                  </div>
+                                                  <small class="d-block text-body">Map service</small>
+                                              </div>
+                                          </div>
+                                      </a>
+                                  </div>
+                              </div>
+                              <!-- End Card -->
+
+                              <!-- Card -->
+                              <div class="col-sm-6 col-md-4 px-2 mb-3">
+                                  <div class="card card-frame h-100">
+                                      <a class="card-body" href="app-description.html">
+                                          <div class="media">
+                                              <div class="avatar avatar-xs mt-1 mr-3">
+                                                  <img class="avatar-img" src="{% static 'assets/img/160x160/img8.jpg' %}" alt="Image Description">
+                                              </div>
+                                              <div class="media-body">
+                                                  <div class="d-flex align-items-center">
+                                                      <span class="d-block text-dark font-weight-bold">PayPal</span>
+                                                      <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                                                  </div>
+                                                  <small class="d-block text-body">Payment service</small>
+                                              </div>
+                                          </div>
+                                      </a>
+                                  </div>
+                              </div>
+                              <!-- End Card -->
+
+                          {% endfor %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Apps Section -->
+      <!-- ========== END MAIN CONTENT ========== -->
+{% endblock content %}
