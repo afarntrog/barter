@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98927935-c6cf-424c-ad4e-ace74a9a18fd" name="Default Changelist" comment="" />
+    <list default="true" id="98927935-c6cf-424c-ad4e-ace74a9a18fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barter_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/barter_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/env/lib/python3.6/site-packages/allauth/templates/account/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-marketplace/app-description.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app-marketplace/app-description.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/author.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/author.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,16 +39,21 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aQI12UgOzxlexTX1BI7KLFNeIy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/users" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/core" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/core" />
       <recent name="$PROJECT_DIR$/templates/users" />
       <recent name="$PROJECT_DIR$/static/images" />
     </key>
@@ -84,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1586661172534</updated>
       <workItem from="1586661176587" duration="9023000" />
-      <workItem from="1586701540638" duration="40547000" />
+      <workItem from="1586701540638" duration="41225000" />
+      <workItem from="1586801523560" duration="32330000" />
     </task>
     <servers />
   </component>
@@ -92,6 +114,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2155" y="200" width="800" height="677" key="#Notifications" timestamp="1586838817725">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2155" y="200" width="800" height="677" key="#Notifications/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1586838817725" />
     <state x="395" y="286" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586661263923">
       <screen x="0" y="189" width="1600" height="873" />
     </state>
@@ -108,11 +134,15 @@
       <screen x="0" y="189" width="1600" height="873" />
     </state>
     <state x="154" y="232" width="1195" height="730" key="SettingsEditor/0.189.1600.873/1600.0.1920.1080@0.189.1600.873" timestamp="1586661495799" />
-    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1586701540995">
+    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1586801524053">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="454" y="452" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@0.189.1600.873" timestamp="1586661177585" />
-    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1586701540995" />
+    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1586801524053" />
+    <state x="2326" y="454" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586822041763">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2326" y="454" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1586822041763" />
     <state x="2223" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1586748246245">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>

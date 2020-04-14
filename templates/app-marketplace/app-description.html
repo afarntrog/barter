@@ -1,333 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+{% extends 'base.html' %}
     {% load static %}
-  <!-- Title -->
-  <title>App Description | App Marketplace | Front - Responsive Website Template</title>
-
-  <!-- Required Meta Tags Always Come First -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
-
-  <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="{% static '/assets/vendor/font-awesome/css/all.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css' %}">
-  <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap-select/dist/css/bootstrap-select.css' %}">
-
-  <!-- CSS Front Template -->
-  <link rel="stylesheet" href="{% static 'assets/css/theme.css' %}">
-</head>
-<body>
-  <!-- ========== HEADER ========== -->
-  <header id="header" class="header">
-    <div class="js-mega-menu header-section">
-      <!-- Topbar -->
-      <div class="container">
-        <nav class="js-mega-menu navbar navbar-expand-lg z-index-999">
-          <!-- Responsive Toggle Button -->
-          <button type="button" class="navbar-toggler btn btn-xs btn-outline-secondary ml-auto"
-                  aria-label="Toggle navigation"
-                  aria-expanded="false"
-                  aria-controls="topBar"
-                  data-toggle="collapse"
-                  data-target="#topBar">
-            Topbar
-            <i class="fa fa-angle-down ml-2"></i>
-          </button>
-          <!-- End Responsive Toggle Button -->
-
-          <div id="topBar" class="collapse navbar-collapse">
-            <ul class="navbar-nav w-100">
-              <li class="navbar-nav-item mr-auto">
-                <a class="nav-link font-size-1 py-2 pl-0" href="../landings/index.html">
-                  <i class="fa fa-angle-left mr-1"></i>
-                  Main Demo
-                </a>
-              </li>
-
-              <!-- Demos -->
-              <li class="hs-has-mega-menu navbar-nav-item"
-                  data-hs-mega-menu-item-options='{
-                    "desktop": {
-                      "position": "right",
-                      "maxWidth": "900px"
-                    }
-                  }'>
-                <a id="demosMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle font-size-1 py-2" href="javascript:;" aria-haspopup="true" aria-expanded="false">Demos</a>
-
-                <!-- Demos - Mega Menu -->
-                <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="demosMegaMenu">
-                  <div class="row no-gutters">
-                    <div class="col-lg-8">
-                      <div class="navbar-promo-card-deck">
-                        <!-- Promo Item -->
-                        <div class="navbar-promo-card navbar-promo-item">
-                          <a class="navbar-promo-link" href="../course/index.html">
-                            <div class="media align-items-center">
-                              <img class="navbar-promo-icon" src="{% static 'assets/svg/icons/icon-67.svg' %}" alt="SVG">
-                              <div class="media-body">
-                                <span class="navbar-promo-title">Course <span class="badge badge-success badge-pill ml-1">New</span></span>
-                                <span class="navbar-promo-text">Learn On-demand demo</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <!-- End Promo Item -->
-
-                        <!-- Promo Item -->
-                        <div class="navbar-promo-card navbar-promo-item">
-                          <a class="navbar-promo-link" href="index.html">
-                            <div class="media align-items-center">
-                              <img class="navbar-promo-icon" src="{% static '/assets/svg/icons/icon-45.svg' %}" alt="SVG">
-                              <div class="media-body">
-                                <span class="navbar-promo-title">App Marketplace</span>
-                                <span class="navbar-promo-text">Marketplace app demo</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <!-- End Promo Item -->
-                      </div>
-
-                      <div class="navbar-promo-card-deck">
-                        <!-- Promo Item -->
-                        <div class="navbar-promo-card navbar-promo-item">
-                          <a class="navbar-promo-link" href="../help-desk/index.html">
-                            <div class="media align-items-center">
-                              <img class="navbar-promo-icon" src="{% static 'static/assets/svg/icons/icon-4.svg' %}" alt="SVG">
-                              <div class="media-body">
-                                <span class="navbar-promo-title">Help Desk</span>
-                                <span class="navbar-promo-text">Help desk demo</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <!-- End Promo Item -->
-
-                        <!-- Promo Item -->
-                        <div class="navbar-promo-card navbar-promo-item">
-                          <a class="navbar-promo-link disabled" href="javascript:;">
-                            <div class="media align-items-center">
-                              <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-5.svg" alt="SVG">
-                              <div class="media-body">
-                                <span class="navbar-promo-title">Account</span>
-                                <span class="navbar-promo-text">Coming soon...</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <!-- End Promo Item -->
-                      </div>
-
-                      <div class="navbar-promo-card-deck">
-                        <!-- Promo Item -->
-                        <div class="navbar-promo-card navbar-promo-item">
-                          <a class="navbar-promo-link disabled" href="javascript:;">
-                            <div class="media align-items-center">
-                              <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-19.svg" alt="SVG">
-                              <div class="media-body">
-                                <span class="navbar-promo-title">Job</span>
-                                <span class="navbar-promo-text">Coming soon...</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <!-- End Promo Item -->
-
-                        <!-- Promo Item -->
-                        <div class="navbar-promo-card navbar-promo-item">
-                          <a class="navbar-promo-link disabled" href="javascript:;">
-                            <div class="media align-items-center">
-                              <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-13.svg" alt="SVG">
-                              <div class="media-body">
-                                <span class="navbar-promo-title">House</span>
-                                <span class="navbar-promo-text">Coming soon...</span>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                        <!-- End Promo Item -->
-                      </div>
-                    </div>
-
-                    <!-- Promo -->
-                    <div class="col-lg-4 navbar-promo d-none d-lg-block">
-                      <a class="d-block navbar-promo-inner" href="#">
-                        <div class="position-relative">
-                          <img class="img-fluid rounded mb-3" src="../../assets/img/380x227/img1.jpg" alt="Image Description">
-                        </div>
-                        <span class="navbar-promo-text font-size-1">Front makes you look at things from a different perspectives.</span>
-                      </a>
-                    </div>
-                    <!-- End Promo -->
-                  </div>
-                </div>
-                <!-- End Demos - Mega Menu -->
-              </li>
-              <!-- End Demos -->
-
-              <!-- Docs -->
-              <li class="hs-has-mega-menu navbar-nav-item"
-                  data-hs-mega-menu-item-options='{
-                    "desktop": {
-                      "position": "right",
-                      "maxWidth": "260px"
-                    }
-                  }'>
-                <a id="docsMegaMenu" class="hs-mega-menu-invoker nav-link nav-link-toggle font-size-1 py-2 pr-0" href="javascript:;" aria-haspopup="true" aria-expanded="false">Docs</a>
-
-                <!-- Docs - Submenu -->
-                <div class="hs-mega-menu dropdown-menu" aria-labelledby="docsMegaMenu" style="min-width: 330px;">
-                  <!-- Promo Item -->
-                  <div class="navbar-promo-item">
-                    <a class="navbar-promo-link" href="../../documentation/index.html">
-                      <div class="media align-items-center">
-                        <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-2.svg" alt="SVG">
-                        <div class="media-body">
-                          <span class="navbar-promo-title">
-                            Documentation
-                            <span class="badge badge-primary badge-pill ml-1">v3.1</span>
-                          </span>
-                          <small class="navbar-promo-text">Development guides</small>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <!-- End Promo Item -->
-
-                  <!-- Promo Item -->
-                  <div class="navbar-promo-item">
-                    <a class="navbar-promo-link" href="../../snippets/index.html">
-                      <div class="media align-items-center">
-                        <img class="navbar-promo-icon" src="../../assets/svg/icons/icon-1.svg" alt="SVG">
-                        <div class="media-body">
-                          <span class="navbar-promo-title">Snippets</span>
-                          <small class="navbar-promo-text">Start building</small>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <!-- End Promo Item -->
-
-                  <div class="navbar-promo-footer">
-                    <!-- List -->
-                    <div class="row no-gutters">
-                      <div class="col-6">
-                        <div class="navbar-promo-footer-item">
-                          <span class="navbar-promo-footer-text">Check what's new</span>
-                          <a class="navbar-promo-footer-text" href="../../documentation/changelog.html">
-                            Changelog
-                          </a>
-                        </div>
-                      </div>
-                      <div class="col-6 navbar-promo-footer-ver-divider">
-                        <div class="navbar-promo-footer-item">
-                          <span class="navbar-promo-footer-text">Have a question?</span>
-                          <a class="navbar-promo-footer-text" href="http://htmlstream.com/contact-us">
-                            Contact us
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End List -->
-                  </div>
-                </div>
-                <!-- End Docs - Submenu -->
-              </li>
-              <!-- End Docs -->
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <!-- End Topbar -->
-
-      <div id="logoAndNav" class="container">
-        <!-- Nav -->
-        <nav class="navbar navbar-expand-lg">
-          <!-- Logo -->
-          <a class="navbar-brand" href="index.html" aria-label="Front">
-            <img src="{% static 'assets/svg/logos/logo.svg' %}" alt="Logo">
-          </a>
-          <!-- End Logo -->
-
-          <!-- Responsive Toggle Button -->
-          <button type="button" class="navbar-toggler btn btn-icon btn-sm rounded-circle"
-                  aria-label="Toggle navigation"
-                  aria-expanded="false"
-                  aria-controls="navBar"
-                  data-toggle="collapse"
-                  data-target="#navBar">
-            <span class="navbar-toggler-default">
-              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
-              </svg>
-            </span>
-            <span class="navbar-toggler-toggled">
-              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
-              </svg>
-            </span>
-          </button>
-          <!-- End Responsive Toggle Button -->
-
-          <!-- Navigation -->
-          <div id="navBar" class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-              <!-- Pages -->
-              <li class="navbar-nav-item">
-                <a class="nav-link" href="index.html">Apps</a>
-              </li>
-              <li class="navbar-nav-item">
-                <a class="nav-link" href="app-description.html">Description</a>
-              </li>
-              <li class="navbar-nav-item">
-                <a class="nav-link" href="app-search-results.html">Search Results</a>
-              </li>
-              <!-- End Pages -->
-
-              <!-- Button -->
-              <li class="navbar-nav-last-item">
-                <a class="btn btn-sm btn-primary transition-3d-hover" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/" target="_blank">
-                  Buy Now
-                </a>
-              </li>
-              <!-- End Button -->
-            </ul>
-          </div>
-          <!-- End Navigation -->
-        </nav>
-        <!-- End Nav -->
-      </div>
-    </div>
-  </header>
+{% block content %}
+    {% load i18n %}
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN CONTENT ========== -->
-  <main id="content" role="main">
-    <!-- Search Section -->
-    <div class="bg-light">
-      <div class="container py-3">
-        <div class="row justify-content-md-between align-items-md-center">
-          <div class="col-md-5 mb-3 mb-md-0">
-            <!-- Breadcrumb -->
-            <nav class="d-inline-block rounded" aria-label="breadcrumb">
-              <ol class="breadcrumb breadcrumb-no-gutter font-size-1 mb-0">
-                <li class="breadcrumb-item"><a href="index.html">Apps</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Description</li>
-              </ol>
-            </nav>
-            <!-- End Breadcrumb -->
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- End Search Section -->
+      <main id="content" role="main">
     <!-- App Description Section -->
     <div class="container space-top-2 space-bottom-lg-2">
       <!-- Content -->
@@ -349,10 +28,8 @@
               <h2 class="h4">Listed by: {{ user.username }}</h2>
             </div>
 
-
-
           <div id="stickyBlockStartPoint" >
-              <div class="js-sticky-block card border p-4"
+              <div class="js-sticky-block-card card border p-4"
                    data-hs-sticky-block-options='{
                      "parentSelector": "#stickyBlockStartPoint",
                      "breakpoint": "md",
@@ -419,18 +96,15 @@
                     <span class="avatar avatar-xs mr-3">
                       <img class="avatar-img" src="{% static 'assets/svg/illustrations/add-file.svg' %}" alt="Image Description">
                     </span>
-                    <span class="text-body font-size-1 mt-1">29 products</span>
+                    <span class="text-body font-size-1 mt-1">{{ user.products.count }} products</span>
                   </div>
                   <!-- End Icon Block -->
                 </div>
               </div>
             </div>
 {#          EMD Profile card #}
-          </div></div>
-
-
-
-{#          #}
+          </div>
+          </div>
 
             <div class="d-none d-md-block">
               <a class="small text-body" href="#"><i class="far fa-flag mr-1"></i> Report abuse</a>
@@ -491,14 +165,15 @@
                     {{ product.desc }}
                 </div>
 
-                <img class="img-fluid rounded mb-4" src="{% static 'assets/img/900x450/img5.jpg' %}" alt="Image Description">
-                <img class="img-fluid rounded mb-4" src="{% static 'assets/img/900x450/img4.jpg' %}" alt="Image Description">
-                <img class="img-fluid rounded" src="{% static 'assets/img/900x450/img3.jpg' %}" alt="Image Description">
-
                 {% for i in product.product_images.all %}
-                    <img class="img-fluid rounded" src="{{ i.image.url }}" alt="Image Description">
+                    <hr>
+                    <img class="img-fluid rounded mb-4" src="{{ i.image.url }}" alt="Image Description">
+                    <br>
+                    <hr>
+                    <br>
                 {% endfor %}
-              </div>
+            </div>
+
 
               <div class="tab-pane fade pt-6" id="pills-two-example1" role="tabpanel" aria-labelledby="pills-two-example1-tab">
                 <!-- Review Header -->
@@ -552,68 +227,6 @@
                 </div>
                 <!-- End Review -->
 
-                <!-- Review -->
-                <div class="media">
-                  <div class="avatar avatar-circle mr-3">
-                    <img class="avatar-img" src="{%  static 'assets/img/100x100/img3.jpg' %}" alt="Image Description">
-                  </div>
-                  <div class="media-body border-bottom pb-6 mb-6">
-                    <span class="h4">Dave Austin</span>
-
-                    <p>This is a pretty cool integration. It is fun and easy to use. I had to make a few sharing for work and Gliffy helped me get the job done. If I had a tablet or touch screen, I would use this more.</p>
-
-                    <small class="text-body mr-2">Was this review helpful?</small>
-                    <a class="small mr-2" href="javascript:;">Yes</a>
-                    <a class="small" href="javascript:;">No</a>
-
-                    <!-- Reply -->
-                    <div class="card bg-light shadow-none p-3 mt-4">
-                      <div class="media">
-                        <div class="avatar mr-3">
-                          <img class="avatar-img" src="{%  static 'assets/img/160x160/img23.png' %}" alt="Image Description">
-                        </div>
-                        <div class="media-body">
-                          <span class="d-block text-dark font-weight-bold">Google Drive</span>
-                          <p>Love it Dave! We're all about keeping it fun and easy.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Reply -->
-                  </div>
-                </div>
-                <!-- End Review -->
-
-                <!-- Review -->
-                <div class="media">
-                  <div class="avatar avatar-circle mr-3">
-                    <img class="avatar-img" src="{%  static 'assets/img/100x100/img11.jpg' %}" alt="Image Description">
-                  </div>
-                  <div class="media-body border-bottom pb-6 mb-6">
-                    <span class="h4">Nika Mundada</span>
-
-                    <p>I love Google Drive! It's super easy to get started and works great with Front pages.</p>
-
-                    <small class="text-body mr-2">Was this review helpful?</small>
-                    <a class="small mr-2" href="javascript:;">Yes</a>
-                    <a class="small" href="javascript:;">No</a>
-
-                    <!-- Reply -->
-                    <div class="card bg-light shadow-none p-3 mt-4">
-                      <div class="media">
-                        <div class="avatar mr-3">
-                          <img class="avatar-img" src="{%  static 'assets/img/160x160/img23.png' %}" alt="Image Description">
-                        </div>
-                        <div class="media-body">
-                          <span class="d-block text-dark font-weight-bold">Google Drive</span>
-                          <p>Thanks for the feedback Nika!</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Reply -->
-                  </div>
-                </div>
-                <!-- End Review -->
-
                 <div class="text-center">
                   <a class="font-weight-bold" href="#">Read More Reviews <i class="fas fa-angle-right ml-1"></i></a>
                 </div>
@@ -643,47 +256,7 @@
                 </div>
                 <!-- End Pricing -->
 
-                <!-- Pricing -->
-                <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
-                  <input type="radio" id="pricingRadio2" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
-                  <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio2">
-                    <span class="row">
-                      <span class="col-sm-3 order-sm-2 text-sm-right mb-3 mb-sm-0">
-                        <span class="d-block mb-2">
-                          <span class="text-primary font-weight-bold align-top">$</span>
-                          <span class="font-size-3 text-primary font-weight-bold">44</span>
-                          <span class="font-size-1">/ mo</span>
-                        </span>
-                      </span>
-                      <span class="col-sm-9 order-sm-1">
-                        <span class="d-block h3 mb-1">Growth</span>
-                        <span class="d-block">500GB storage in growth accounts</span>
-                      </span>
-                    </span>
-                  </label>
-                </div>
-                <!-- End Pricing -->
 
-                <!-- Pricing -->
-                <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
-                  <input type="radio" id="pricingRadio3" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
-                  <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio3">
-                    <span class="row">
-                      <span class="col-sm-3 order-sm-2 text-sm-right mb-3 mb-sm-0">
-                        <span class="d-block mb-2">
-                          <span class="text-primary font-weight-bold align-top">$</span>
-                          <span class="font-size-3 text-primary font-weight-bold">99</span>
-                          <span class="font-size-1">/ mo</span>
-                        </span>
-                      </span>
-                      <span class="col-sm-9 order-sm-1">
-                        <span class="d-block h3 mb-1">Enterprise</span>
-                        <span class="d-block">100TB storage in enterprise accounts</span>
-                      </span>
-                    </span>
-                  </label>
-                </div>
-                <!-- End Pricing -->
 
                 <div class="text-center mt-5">
                   <div class="mb-5">
@@ -694,10 +267,13 @@
               </div>
             </div>
             <!-- End Tab Content -->
+
+              </div>
           </div>
         </div>
       </div>
       <!-- End Content -->
+  </main>
     </div>
     <!-- End App Description Section -->
 
@@ -837,137 +413,33 @@
       </div>
     </div>
     <!-- End Related Items Section -->
-  </main>
-  <!-- ========== END MAIN CONTENT ========== -->
+    <!-- ========== END MAIN CONTENT ========== -->
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="bg-light">
-    <!-- Info -->
-    <div class="container space-2">
-      <div class="row align-items-md-center text-center text-md-left">
-        <div class="col-md-6 mb-3 mb-md-0">
-          <h2>List your app on Marketplace</h2>
-          <p class="mb-0">Let us help to turn your ideas into startups.</p>
-        </div>
-        <div class="col-md-6 text-md-right">
-          <a class="btn btn-primary transition-3d-hover" href="#">Submit your App <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-        </div>
-      </div>
-    </div>
-    <!-- End Info -->
 
-    <!-- Lists -->
-    <div class="container">
-      <div class="border-top space-2">
-        <div class="row justify-content-md-between">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <a class="d-inline-flex mb-4" href="index.html" aria-label="Front">
-              <img class="brand" src="{% static 'assets/svg/logos/logo.svg' %}" alt="Logo">
-            </a>
-            <p>We are driven to deliver results for all your businesses.</p>
-          </div>
-
-          <div class="col-6 col-sm-4 col-lg-2 mb-4 mb-lg-0">
-            <h5>About</h5>
-
-            <!-- Nav Link -->
-            <ul class="nav nav-sm nav-x-0 flex-column">
-              <li class="nav-item"><a class="nav-link" href="../pages/about-agency.html">About</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/services-agency.html">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/careers.html">Careers</a></li>
-            </ul>
-            <!-- End Nav Link -->
-          </div>
-
-          <div class="col-6 col-sm-4 col-lg-2 mb-4 mb-lg-0">
-            <h5>Account</h5>
-
-            <!-- Nav Link -->
-            <ul class="nav nav-sm nav-x-0 flex-column">
-              <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">My tasks</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
-            </ul>
-            <!-- End Nav Link -->
-          </div>
-
-          <div class="col-6 col-sm-4 col-lg-2">
-            <h5>Resources</h5>
-
-            <!-- Nav Link -->
-            <ul class="nav nav-sm nav-x-0 flex-column">
-              <li class="nav-item"><a class="nav-link" href="../pages/faq.html">Help</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/terms.html">Terms</a></li>
-              <li class="nav-item"><a class="nav-link" href="../pages/privacy.html">Privacy</a></li>
-            </ul>
-            <!-- End Nav Link -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Lists -->
-  </footer>
-  <!-- ========== END FOOTER ========== -->
-
-  <!-- Go to Top -->
-  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
-     data-hs-go-to-options='{
-       "offsetTop": 700,
-       "position": {
-         "init": {
-           "right": 15
-         },
-         "show": {
-           "bottom": 15
-         },
-         "hide": {
-           "bottom": -15
-         }
-       }
-     }'>
-    <i class="fas fa-angle-up"></i>
-  </a>
-  <!-- End Go to Top -->
-
-  <!-- JS Global Compulsory -->
-  <script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
-  <script src="{%  static 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
-
-  <!-- JS Implementing Plugins -->
-  <script src="{% static 'assets/vendor/hs-header/dist/hs-header.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/hs-go-to/dist/hs-go-to.min.js' %}"></script>
-  <script src="{%  static 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' %}"></script>
-  <script src="{%  static 'assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
-
-  <!-- JS Front -->
-  <script src="{% static 'assets/js/hs.core.js' %}"></script>
-  <script src="{% static 'assets/js/hs.selectpicker.js' %}"></script>
-
-  <!-- JS Plugins Init. -->
-  <script>
-    $(document).on('ready', function () {
-      // initialization of header
-      var header = new HSHeader($('#header')).init();
-
-      // initialization of mega menu
-      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
-
-      // initialization of select picker
-      $('.js-selectpicker').each(function () {
-        var selectpicker = $.HSCore.components.HSSelectPicker.init($(this));
-      });
-
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
-    });
-  </script>
 
   <!-- IE Support -->
-  <script>
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{% static 'assets/vendor/polifills.js' %}"><\/script>');
-  </script>
-</body>
-</html>
+{#  <script>#}
+{#    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{% static 'assets/vendor/polifills.js' %}"><\/script>');#}
+{#  </script>#}
+
+
+
+
+  <!-- JS Global Compulsory -->
+{#    {% include 'snippets/js_source.html' %}#}
+{#  <script src="{% static 'assets/vendor/jquery/dist/jquery.min.js' %}"></script>#}
+{#  <script src="{% static 'assets/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>#}
+{#  <script src="{%  static 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' %}"></script>#}
+
+
+  <!-- JS Plugins Init. -->
+{#    {% include 'snippets/js_plugins_init.html' %}#}
+{#  <script>#}
+{#    $(document).on('ready', function () {#}
+{#      // initialization of header#}
+{#      var header = new HSHeader($('#header')).init();#}
+{#      // initialization of mega menu#}
+{#      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();#}
+{#    });#}
+{#  </script>#}
+{% endblock content %}

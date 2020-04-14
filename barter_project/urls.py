@@ -29,9 +29,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('users.urls')),
     path('product/', include('core.urls')),
-
-
-    path('', home, name='home'),
 ]
 if settings.DEBUG: # new
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

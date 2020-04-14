@@ -3,124 +3,7 @@
 {% load i18n %}
   {% block content %}
 
-      <div id="logoAndNav" class="container mt-lg-n2">
-        <!-- Nav -->
-        <nav class="js-mega-menu navbar navbar-expand-lg">
-          <div class="navbar-nav-wrap">
-            <!-- Secondary Content -->
-            <div class="navbar-nav-wrap-content">
-            <!-- Account -->
-              <div class="hs-unfold">
-                <a class="js-hs-unfold-invoker rounded-circle" href="javascript:;"
-                   data-hs-unfold-options='{
-                    "target": "#accountDropdown",
-                    "type": "css-animation",
-                    "event": "hover",
-                    "duration": 50,
-                    "delay": 0,
-                    "hideOnScroll": "true"
-                   }'>
-                  <span class="avatar avatar-xs avatar-circle">
-                    <img class="avatar-img" src="{% static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">
-                  </span>
-                </a>
 
-                <div id="accountDropdown" class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0" style="min-width: 245px;">
-                  <div class="card">
-                    <!-- Header -->
-                    <div class="card-header p-4">
-                      <a class="media align-items-center" href="#">
-                        <div class="avatar mr-3">
-                          <img class="avatar-img" src="{% static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">
-                        </div>
-                        <div class="media-body">
-                          <span class="d-block font-weight-bold">Nataly Gaga <span class="badge badge-success ml-1">Pro</span></span>
-                          <span class="d-block small text-muted">natalygaga@gmail.com</span>
-                        </div>
-                      </a>
-                    </div>
-                    <!-- End Header -->
-
-                    <!-- Body -->
-                    <div class="card-body py-3">
-                      <a class="dropdown-item px-0" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-comments"></i>
-                        </span>
-                        Messages
-                      </a>
-                      <a class="dropdown-item d-lg-none" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-tasks"></i>
-                        </span>
-                        My Products
-                      </a>
-                      <a class="dropdown-item px-0" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-database"></i>
-                        </span>
-                        Purchase history
-                      </a>
-                      <a class="dropdown-item px-0" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-user"></i>
-                        </span>
-                        Account
-                      </a>
-                      <a class="dropdown-item px-0" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-credit-card"></i>
-                        </span>
-                        Payment methods
-                      </a>
-
-                      <div class="dropdown-divider"></div>
-
-                      <a class="dropdown-item px-0" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-question-circle"></i>
-                        </span>
-                        Help
-                      </a>
-                      <a class="dropdown-item px-0" href="#">
-                        <span class="dropdown-item-icon">
-                          <i class="fas fa-power-off"></i>
-                        </span>
-                        Log out
-                      </a>
-                    </div>
-                    <!-- End Body -->
-                  </div>
-                </div>
-              </div>
-              <!-- End Account -->
-            </div>
-            <!-- End Secondary Content -->
-
-            <!-- Responsive Toggle Button -->
-            <button type="button" class="navbar-toggler navbar-nav-wrap-navbar-toggler btn btn-icon btn-sm rounded-circle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false"
-                    aria-controls="navBar"
-                    data-toggle="collapse"
-                    data-target="#navBar">
-              <span class="navbar-toggler-default">
-                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
-                </svg>
-              </span>
-              <span class="navbar-toggler-toggled">
-                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
-                </svg>
-              </span>
-            </button>
-            <!-- End Responsive Toggle Button -->
-          </div>
-        </nav>
-        <!-- End Nav -->
-      </div>
-    </div>
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN CONTENT ========== -->
@@ -142,7 +25,7 @@
                }'>
             <div class="text-center">
               <!-- User Content {% static 'assets/img/160x160/img2.jpg' %}-->
-              <img class="img-fluid rounded-circle mx-auto" src="{{ user.profile.profile_pic.url }}" alt="Image Description" width="120" height="120">
+              <img class="img-fluid rounded-circle mx-auto" src="{{ user.profile.profile_pic.url|default:"assets/svg/illustrations/review-rating-shield.svg" }}" alt="Image Description" width="120" height="120">
 
               <span class="d-block text-body font-size-1 mt-3">Joined in {{ user.date_joined }}</span>
 
@@ -325,160 +208,60 @@
               <h3 class="mb-4">{{ user.username }}'s products</h3>
 
                 {% for product in user.products.all %}
-              <!-- Course -->
-              <div class=" border-top pt-3 mt-3 ">
-                <a class="card shadow-none" href="{{ product.get_absolute_url }}">
-                  <div class="card-body p-0">
-                    <div class="row">
-                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
-                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
-                      </div>
-                      <div class="col-sm-7 col-lg-9">
+                  <!-- Course -->
+                  <div class=" border-top pt-3 mt-3 ">
+                    <a class="card shadow-none" href="{{ product.get_absolute_url }}">
+                      <div class="card-body p-0">
                         <div class="row">
-                          <div class="col-lg-6 mb-2 mb-lg-0">
-                            <h5 class="text-hover-primary">{{product.title}}</h5>
-                            <div class="d-flex align-items-center flex-wrap">
-                              <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
-                              </ul>
-                              <span class="d-inline-block">
-                                <span class="text-dark font-size-1 mr-1">4.95</span>
-                              </span>
-                            </div>
+                          <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
+                            <img class="img-fluid rounded" src="{{ product.product_images.all.0.image.url }}" alt="Image Description">
                           </div>
-
-                          <div class="col-lg-6">
+                          <div class="col-sm-7 col-lg-9">
                             <div class="row">
-                              <div class="col-7">
-                                <div class="small text-muted mb-2">
-                                  <i class="fas fa-book-reader mr-1"></i>
-                                  {{ total_views }} views
-                                </div>
-                                <div class="small text-muted">
-                                  <i class="fas fa-clock mr-1"></i>
-                                  Listed on: {{ product.created_at }}
-                                    {{ ip }}
+                              <div class="col-lg-6 mb-2 mb-lg-0">
+                                <h5 class="text-hover-primary">{{product.title}}</h5>
+                                <div class="d-flex align-items-center flex-wrap">
+                                  <ul class="list-inline mt-n1 mb-0 mr-2">
+                                    <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                    <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                    <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                    <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
+                                    <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
+                                  </ul>
+                                  <span class="d-inline-block">
+                                    <span class="text-dark font-size-1 mr-1">4.95</span>
+                                  </span>
                                 </div>
                               </div>
-                              <div class="col-5 text-right">
-                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
-                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
+
+                              <div class="col-lg-6">
+                                <div class="row">
+                                  <div class="col-7">
+                                    <div class="small text-muted mb-2">
+                                      <i class="fas fa-book-reader mr-1"></i>
+                                      {{ total_views }} views
+                                    </div>
+                                    <div class="small text-muted">
+                                      <i class="fas fa-clock mr-1"></i>
+                                      Listed on: {{ product.created_at }}
+                                    </div>
+                                  </div>
+{#                                  <div class="col-5 text-right">#}
+{#                                    <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>#}
+{#                                    <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>#}
+{#                                  </div>#}
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
-                </a>
-              </div>
-              <!-- End Course -->
+                  <!-- End Course -->
                 {% endfor %}
-<!-- Course -->
-              <div class=" border-top pt-3 mt-3 ">
-                <a class="card shadow-none" href="#">
-                  <div class="card-body p-0">
-                    <div class="row">
-                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
-                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
-                      </div>
-                      <div class="col-sm-7 col-lg-9">
-                        <div class="row">
-                          <div class="col-lg-6 mb-2 mb-lg-0">
-                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
-                            <div class="d-flex align-items-center flex-wrap">
-                              <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
-                              </ul>
-                              <span class="d-inline-block">
-                                <span class="text-dark font-size-1 mr-1">4.95</span>
-                              </span>
-                            </div>
-                          </div>
 
-                          <div class="col-lg-6">
-                            <div class="row">
-                              <div class="col-7">
-                                <div class="small text-muted mb-2">
-                                  <i class="fas fa-book-reader mr-1"></i>
-                                  10 lessons
-                                </div>
-                                <div class="small text-muted">
-                                  <i class="fas fa-clock mr-1"></i>
-                                  3h 25m
-                                </div>
-                              </div>
-                              <div class="col-5 text-right">
-                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
-                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- End Course --><!-- Course -->
-              <div class=" border-top pt-3 mt-3 ">
-                <a class="card shadow-none" href="#">
-                  <div class="card-body p-0">
-                    <div class="row">
-                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
-                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
-                      </div>
-                      <div class="col-sm-7 col-lg-9">
-                        <div class="row">
-                          <div class="col-lg-6 mb-2 mb-lg-0">
-                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
-                            <div class="d-flex align-items-center flex-wrap">
-                              <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
-                              </ul>
-                              <span class="d-inline-block">
-                                <span class="text-dark font-size-1 mr-1">4.95</span>
-                              </span>
-                            </div>
-                          </div>
 
-                          <div class="col-lg-6">
-                            <div class="row">
-                              <div class="col-7">
-                                <div class="small text-muted mb-2">
-                                  <i class="fas fa-book-reader mr-1"></i>
-                                  10 lessons
-                                </div>
-                                <div class="small text-muted">
-                                  <i class="fas fa-clock mr-1"></i>
-                                  3h 25m
-                                </div>
-                              </div>
-                              <div class="col-5 text-right">
-                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
-                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- End Course -->
 
               <div class="text-right font-size-1 mt-6">
                 <a class="font-weight-bold" href="courses-listing.html">See all Courses <i class="fas fa-angle-right fa-sm ml-1"></i></a>
@@ -714,226 +497,81 @@
                   </label>
                 </div>
                 <!-- End Username -->
-
-                <!-- Confirm Email -->
+{# CONFIRM EMAIL #}
+          <!-- Confirm Email -->
                 <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
                   <input type="radio" id="pricingRadio3" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input">
                   <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio3">
-                    <span class="row">
-                      <span class="col-sm-3 order-sm-2 text-sm-right mb-3 mb-sm-0">
-                        <span class="d-block mb-2">
-                          <span class="text-primary font-weight-bold align-top">$</span>
-                          <span class="font-size-3 text-primary font-weight-bold">99</span>
-                          <span class="font-size-1">/ mo</span>
-                        </span>
-                      </span>
-                      <span class="col-sm-9 order-sm-1">
-                        <span class="d-block h3 mb-1">Enterprise</span>
-                        <span class="d-block">100TB storage in enterprise accounts</span>
-                      </span>
-                    </span>
+                    {% trans "Account" %}
+                        <h1>{% trans "E-mail Addresses" %}</h1>
+                    {% if user.emailaddress_set.all %}
+                    <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
+
+                <form action="{% url 'account_email' %}" class="email_list" method="post">
+                    {% csrf_token %}
+                    <fieldset class="blockLabels">
+
+                      {% for emailaddress in user.emailaddress_set.all %}
+                        <div class="ctrlHolder">
+                          <label for="email_radio_{{forloop.counter}}" class="{% if emailaddress.primary %}primary_email{%endif%}">
+
+                          <input id="email_radio_{{forloop.counter}}" type="radio" name="email" {% if emailaddress.primary or user.emailaddress_set.count == 1 %}checked="checked"{%endif %} value="{{emailaddress.email}}"/>
+                            {{ emailaddress.email }}
+                                {% if emailaddress.verified %}
+                                    <span class="verified">{% trans "Verified" %}</span>
+                                {% else %}
+                                    <span class="unverified">{% trans "Unverified" %}</span>
+                                {% endif %}
+                              {% if emailaddress.primary %}<span class="primary">{% trans "Primary" %}</span>{% endif %}
+                            </label>
+                        </div>
+                      {% endfor %}
+
+                    <div class="buttonHolder">
+                          <button class="btn btn-soft-primary" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+                          <button class="btn btn-soft-secondary" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+                          <button class="btn btn-soft-danger" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+                    </div>
+
+                    </fieldset>
+                    </form>
+
+                    {% else %}
+                    <p><strong>{% trans 'Warning:'%}</strong> {% trans "You currently do not have any e-mail address set up. You should really add an e-mail address so you can receive notifications, reset your password, etc." %}</p>
+
+                    {% endif %}
+
+                    <script type="text/javascript">
+                            (function() {
+                              var message = "{% trans 'Do you really want to remove the selected e-mail address?' %}";
+                              var actions = document.getElementsByName('action_remove');
+                              if (actions.length) {
+                                actions[0].addEventListener("click", function(e) {
+                                  if (! confirm(message)) {
+                                    e.preventDefault();
+                                  }
+                                });
+                              }
+                            })();
+                    </script>
                   </label>
                 </div>
-                <!-- End Confirm Email -->
+            <!-- End Confirm Email -->
+
+{# END CONFIRM EMAIL  #}
+
 
                 <div class="text-center mt-5">
                   <div class="mb-5">
-                    <p class="font-size-1">Need 100TB+ storage? <a class="font-weight-bold" href="#">Contact us for custom pricing</a></p>
+                    <p class="font-size-1">Need help? <a class="font-weight-bold" href="#">Contact us for customer support</a></p>
                   </div>
-                  <button type="button" class="btn btn-primary btn-wide transition-3d-hover">Submit</button>
+                  <button type="button" class="btn btn-primary btn-wide transition-3d-hover">Get Support</button>
                 </div>
               </div>
             </div>
             <!-- End Tab Content -->
 {#If user is not logged in then the settings tab displays reviews for this user #}
-
-        <div class="col-md-7 col-lg-8">
-          <div class="ml-lg-6">
-            <div class="mb-3 mb-sm-0 mr-2">
-              <h2>{{user.username}} yjuytuty</h2>
-            </div>
-         </div>
-        </div>
       </div>
-
-            <p>{{ user.profile.bio }}</p>
-
-            <!-- Read More - Collapse -->
-            <div class="collapse" id="collapseDescriptionSection">
-              <p>{{ user.profile.bio }}</p>
-            </div>
-            <!-- End Read More - Collapse -->
-
-            <!-- Link -->
-            <a class="link link-collapse small font-size-1 font-weight-bold" data-toggle="collapse" href="#collapseDescriptionSection" role="button" aria-expanded="false" aria-controls="collapseDescriptionSection">
-              <span class="link-collapse-default">Read more</span>
-              <span class="link-collapse-active">Read less</span>
-              <span class="link-icon ml-1">+</span>
-            </a>
-            <!-- End Link -->
-
-            <!-- Courses -->
-            <div class="border-top pt-5 mt-5">
-              <h3 class="mb-4">Products from {{ user.username }}</h3>
-
-              <!-- Course -->
-              <div class=" border-top pt-3 mt-3 ">
-                <a class="card shadow-none" href="#">
-                  <div class="card-body p-0">
-                    <div class="row">
-                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
-                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
-                      </div>
-                      <div class="col-sm-7 col-lg-9">
-                        <div class="row">
-                          <div class="col-lg-6 mb-2 mb-lg-0">
-                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
-                            <div class="d-flex align-items-center flex-wrap">
-                              <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
-                              </ul>
-                              <span class="d-inline-block">
-                                <span class="text-dark font-size-1 mr-1">4.95</span>
-                              </span>
-                            </div>
-                          </div>
-
-                          <div class="col-lg-6">
-                            <div class="row">
-                              <div class="col-7">
-                                <div class="small text-muted mb-2">
-                                  <i class="fas fa-book-reader mr-1"></i>
-                                  10 lessons
-                                </div>
-                                <div class="small text-muted">
-                                  <i class="fas fa-clock mr-1"></i>
-                                  3h 25m
-                                </div>
-                              </div>
-                              <div class="col-5 text-right">
-                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
-                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- End Course -->
-<!-- Course -->
-              <div class=" border-top pt-3 mt-3 ">
-                <a class="card shadow-none" href="#">
-                  <div class="card-body p-0">
-                    <div class="row">
-                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
-                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
-                      </div>
-                      <div class="col-sm-7 col-lg-9">
-                        <div class="row">
-                          <div class="col-lg-6 mb-2 mb-lg-0">
-                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
-                            <div class="d-flex align-items-center flex-wrap">
-                              <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
-                              </ul>
-                              <span class="d-inline-block">
-                                <span class="text-dark font-size-1 mr-1">4.95</span>
-                              </span>
-                            </div>
-                          </div>
-
-                          <div class="col-lg-6">
-                            <div class="row">
-                              <div class="col-7">
-                                <div class="small text-muted mb-2">
-                                  <i class="fas fa-book-reader mr-1"></i>
-                                  10 lessons
-                                </div>
-                                <div class="small text-muted">
-                                  <i class="fas fa-clock mr-1"></i>
-                                  3h 25m
-                                </div>
-                              </div>
-                              <div class="col-5 text-right">
-                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
-                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- End Course --><!-- Course -->
-              <div class=" border-top pt-3 mt-3 ">
-                <a class="card shadow-none" href="#">
-                  <div class="card-body p-0">
-                    <div class="row">
-                      <div class="col-sm-5 col-lg-3 mb-3 mb-sm-0">
-                        <img class="img-fluid rounded" src="{%  static  'assets/svg/components/graphics-4.svg' %}" alt="Image Description">
-                      </div>
-                      <div class="col-sm-7 col-lg-9">
-                        <div class="row">
-                          <div class="col-lg-6 mb-2 mb-lg-0">
-                            <h5 class="text-hover-primary">Get started with Vue.js</h5>
-                            <div class="d-flex align-items-center flex-wrap">
-                              <ul class="list-inline mt-n1 mb-0 mr-2">
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16"></li>
-                                <li class="list-inline-item mx-0"><img src="{%  static  'assets/svg/illustrations/star-muted.svg' %}" alt="Review rating" width="16"></li>
-                              </ul>
-                              <span class="d-inline-block">
-                                <span class="text-dark font-size-1 mr-1">4.95</span>
-                              </span>
-                            </div>
-                          </div>
-
-                          <div class="col-lg-6">
-                            <div class="row">
-                              <div class="col-7">
-                                <div class="small text-muted mb-2">
-                                  <i class="fas fa-book-reader mr-1"></i>
-                                  10 lessons
-                                </div>
-                                <div class="small text-muted">
-                                  <i class="fas fa-clock mr-1"></i>
-                                  3h 25m
-                                </div>
-                              </div>
-                              <div class="col-5 text-right">
-                                <small class="d-block text-muted text-lh-sm"><del>$78.00</del></small>
-                                <span class="d-block h5 text-primary text-lh-sm mb-0">$73.00</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- End Course -->
-
-              <div class="text-right font-size-1 mt-6">
-                <a class="font-weight-bold" href="courses-listing.html">See all Courses <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-              </div>
-            </div>
-            <!-- End Courses -->
 
             <!-- Courses -->
             <div class="border-top pt-5 mt-5">

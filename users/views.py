@@ -14,18 +14,19 @@ def home(request):
 
 
 def profile(request):
-    user = get_user_model().objects.get(username='aaron')
+    user = get_user_model().objects.get(username=request.user.username)
     user.products.all()
-    view_count = record_view(request, '7d517151-d63f-49ed-8cd6-4094eef7b697')
+    # view_count = record_view(request, '7d517151-d63f-49ed-8cd6-4094eef7b697')
     ip = request.META['REMOTE_ADDR']
-    return render(request, 'users/author.html', {'user': user, 'ip': ip, 'total_views': view_count})
+    return render(request, 'users/author.html', {'user': user, 'ip': ip, })
 
 
 class ProfileDetail(View):
     def get(self, request, *args, **kwargs):
         profile = Profile.objects.get(user=get_user_model().objects.get(username=kwargs['username']))
-        record_view(request, profile.id)
-        return render(request, 'users/author.html', {'profile': profile})
+        user = get_user_model().objects.get(username=kwargs['username'])
+        view_count = record_view(request, profile.id)
+        return render(request, 'users/author.html', {'profile': profile, 'user': user, 'total_views': view_count})
 
 
 # Count unique views

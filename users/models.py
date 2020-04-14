@@ -44,7 +44,7 @@ class Address(models.Model):
 ##############
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
-    profile_pic = models.ImageField(upload_to='profile_pics/', null=True)
+    profile_pic = models.ImageField(upload_to='profile_pics/', default='profile_pics/2019-08-08-000102_NjSNT4p.jpg')
     phone = PhoneNumberField(
         blank=True)  # https://stackoverflow.com/questions/19130942/whats-the-best-way-to-store-phone-number-in-django-models
     bio = models.TextField(max_length=500, blank=True, null=True)

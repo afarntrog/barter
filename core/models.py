@@ -23,7 +23,7 @@ class Product(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='products')
     title = models.CharField(max_length=250, blank=False, null=True)
     desc = models.TextField(max_length=250, blank=False, null=True)
-    # views = models.IntegerField(default=0)
+    view_count = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
