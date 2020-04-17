@@ -21,6 +21,12 @@ def profile(request):
     return render(request, 'users/author.html', {'user': user, 'ip': ip, })
 
 
+# Settings page
+class SettingsView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'users/settings.html', {})
+
+
 class ProfileDetail(View):
     def get(self, request, *args, **kwargs):
         profile = Profile.objects.get(user=get_user_model().objects.get(username=kwargs['username']))

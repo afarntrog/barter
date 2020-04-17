@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load widget_tweaks %}
 {% load i18n %}
 {% load static %}
 
@@ -308,7 +307,7 @@
 
         {% for product in products %}
           <!-- Card -->
-          <a class="d-block border-bottom pb-5 mb-5" href="course-description.html">
+          <div class="d-block border-bottom pb-5 mb-5" >
             <div class="row mx-md-n2">
               <div class="col-md-4 px-md-2 mb-3 mb-md-0">
                 <div class="position-relative">
@@ -323,26 +322,30 @@
                   </div>
                   <div class="d-flex mt-1 ml-auto">
                     <div class="text-right">
-                      <small class="d-block text-muted text-lh-sm">(10 reviews)</small>
-                      <span class="d-block h5 text-primary text-lh-sm mb-0">
-                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>
-                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>
-                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>
-                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>
-                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>
-                      </span>
+{#                      <small class="d-block text-muted text-lh-sm">(10 reviews)</small>#}
+{#                      <span class="d-block h5 text-primary text-lh-sm mb-0">#}
+{#                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>#}
+{#                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>#}
+{#                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>#}
+{#                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>#}
+{#                          <li class="list-inline-item mx-0"><img src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Review rating" width="14"></li>#}
+{#                      </span>#}
+                        <button type="button" class="btn fav btn-sm btn-soft-{% if product.uid in  favorites %}danger{% else %}secondary{% endif %} btn-pill transition-3d-hover" data-href="{% url 'add_to_favorites' product.uid %}">
+                            <i  class="far fa-heart mr-1"></i> Favorite
+                        </button>
                     </div>
                   </div>
                 </div>
-
+{# data-toggle="tooltip" data-placement="top" title="{{ product.owner.username }}"#}
                 <div class="d-flex justify-content-start align-items-center small text-muted mb-2">
-                  <div class="d-flex align-items-center">
+                                      <div class="d-flex align-items-center">
                     <div class="avatar-group">
-                      <span class="avatar avatar-xs avatar-circle" data-toggle="tooltip" data-placement="top" title="{{ product.owner.username }}">
-                        <img class="avatar-img" src="{{ product.owner.profile.profile_pic.url}}" alt="Image Description">
+                      <span class="avatar avatar-xs avatar-circle" >
+                          <img class="avatar-img"  src="{{ product.owner.profile.profile_pic.url}}" alt="Image Description">
                       </span>
                     </div>
                   </div>
+
                   <div class="ml-auto">
                     <i class="fa fa-book-reader mr-1"></i>
                     {{ product.view_count}} views
@@ -362,7 +365,7 @@
                 <p class="font-size-1 text-body mb-0">{{ product.desc|truncatewords:20 }}</p>
               </div>
             </div>
-          </a>
+          </div>
           <!-- End Card -->
             {% endfor %}
 
@@ -430,48 +433,93 @@
   </a>
   <!-- End Go to Top -->
 
-  <!-- JS Global Compulsory -->
-  <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="../../assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
-  <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS Implementing Plugins -->
-  <script src="../../assets/vendor/hs-header/dist/hs-header.min.js"></script>
-  <script src="../../assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
-  <script src="../../assets/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
-  <script src="../../assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
-  <script src="../../assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
-
-  <!-- JS Front -->
-  <script src="../../assets/js/hs.core.js"></script>
-  <script src="../../assets/js/hs.selectpicker.js"></script>
-
-  <!-- JS Plugins Init. -->
-  <script>
-    $(document).on('ready', function () {
-      // initialization of header
-      var header = new HSHeader($('#header')).init();
-
-      // initialization of mega menu
-      var megaMenu = new HSMegaMenu($('.js-mega-menu')).init();
-
-      // initialization of unfold
-      var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
-
-      // initialization of select picker
-      $('.js-selectpicker').each(function () {
-        var selectpicker = $.HSCore.components.HSSelectPicker.init($(this));
-      });
-
-      // initialization of go to
-      $('.js-go-to').each(function () {
-        var goTo = new HSGoTo($(this)).init();
-      });
-    });
-  </script>
-
-  <!-- IE Support -->
-  <script>
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="../../assets/vendor/polifills.js"><\/script>');
-  </script>
 {% endblock content %}
+{% block javascript %}
+    {{ block.super }}
+    <script>
+        function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+  window.onload = function() {
+    if (window.jQuery) {
+        // jQuery is loaded
+        console.log("Yeah!");
+    } else {
+        // jQuery is not loaded
+        console.log("Doesn't Work");
+    }
+}
+
+$(document).ready(function () {
+
+    {#function getCookie(name) {#}
+    {#    var cookieValue = null;#}
+    {#    if (document.cookie && document.cookie !== '') {#}
+    {#        var cookies = document.cookie.split(';');#}
+    {#        for (var i = 0; i < cookies.length; i++) {#}
+    {#            var cookie = cookies[i].trim();#}
+    {#            // Does this cookie string begin with the name we want?#}
+    {#            if (cookie.substring(0, name.length + 1) === (name + '=')) {#}
+    {#                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));#}
+    {#                break;#}
+    {#            }#}
+    {#        }#}
+    {#    }#}
+    {#    return cookieValue;#}
+    {# }#}
+    {#var csrftoken = getCookie('csrftoken');#}
+    var csrftoken = getCookie('csrftoken');
+    {#https://docs.djangoproject.com/en/3.0/ref/csrf/#ajax#}
+
+    function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+    $(".fav").click(function () {
+        var clicked = $(this);
+        $.ajax({
+            type: 'POST', // or another (GET), whatever you need
+            url: $(this).attr("data-href"),
+            data:  $(this).serialize(),
+            success: function (data) {
+                if (data['class'] == 'success') {
+                    clicked.removeClass('btn-soft-secondary');
+                    clicked.addClass('btn-soft-danger')
+                }
+                else {
+                    clicked.removeClass('btn-soft-danger');
+                    clicked.addClass('btn-soft-secondary')
+                }
+                // success callback
+                // you can process data returned by function from views.py
+            },
+            error: function (data) {
+                alert('Error: Please contact us.')
+            },
+        })
+    })
+});
+
+  </script>
+{% endblock javascript %}
+

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action active" href="#"><i class="fas fa-home fa-sm min-w-4rem mr-1"></i> Dashboard</a>
+      <a class="list-group-item list-group-item-action" href="{% url 'account_email' %}"><i class="fas fa-user-circle fa-sm min-w-4rem mr-1"></i> Profile</a>
+      <a class="list-group-item list-group-item-action" href="#"><i class="fas fa-tasks fa-sm min-w-4rem mr-1"></i> Tasks</a>
+      <a class="list-group-item list-group-item-action" href="#"><i class="fas fa-layer-group fa-sm min-w-4rem mr-1"></i> Projects</a>
+      <a class="list-group-item list-group-item-action" href="#"><i class="fas fa-users fa-sm min-w-4rem mr-1"></i> Members</a>
+    </div>
+{% endblock content %}

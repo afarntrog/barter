@@ -1,19 +1,38 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import FormView
 from django.views.generic.base import View
 
-from core.models import Product, ProductViewCount, ProductImages
+from core.models import Product, ProductViewCount, ProductImages, Favorite
 from .forms import ProductPostForm
 from django.db.models import F
 import json
 
+# core/views.py
+class AddToFavorites(View):
+    def post(self, request, *args, **kwargs):
+        product = Product.objects.get(uid=kwargs['pk'])
+
+        # filter for object.
+        fav = Favorite.objects.filter(product=product, user=request.user)
+        # If already in fav then toggle fav by removing it.
+        if fav.exists():
+            fav.delete()
+            return JsonResponse({'result': 'Removed from favorites', 'class': 'danger'})
+
+        # Create and Add to favorites
+        fav = Favorite(product=product, user=request.user)
+        fav.save()
+        return JsonResponse({'result': "Added to favorites", 'class': 'success'})
 
 class ProductList(View):
     def get(self, request, *args, **kwargs):
         products = Product.objects.all()
-        return render(request, 'core/product_listing.html', {'products': products, })
+        # Get this users favorite objects. Store all the uid in a list and check if product.uid is in favorites inside template
+        favorites = Favorite.objects.filter(user=request.user)
+        favorites = [f.product.uid for f in favorites]
+        return render(request, 'core/product_listing.html', {'products': products, 'favorites': favorites })
 
 
 class ProductDetail(View):
