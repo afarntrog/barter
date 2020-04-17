@@ -10,7 +10,7 @@ from core.models import Product, ProductViewCount
 
 
 def home(request):
-    return render(request, 'templates/app-marketplace/app-description.html', context={})
+    return render(request, 'core/index.html', context={})
 
 
 def profile(request):

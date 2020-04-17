@@ -41,7 +41,7 @@ class ProductDetail(View):
         total_views = record_view(request, kwargs['pk'])
         product.view_count = F('view_count') + total_views
         product.save()
-        return render(request, 'app-marketplace/app-description.html', {'product': product, 'total_views': total_views})
+        return render(request, 'core/product_detail.html', {'product': product, 'total_views': total_views})
 
 
 # Count unique views. If it is new view then return 1 and update the counter table with ip etc.

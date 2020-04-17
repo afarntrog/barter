@@ -14,6 +14,7 @@
   <script src="{%  static 'assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
 {#  <script src="{% static 'assets/vendor/dropzone/dist/min/dropzone.min.js' %}"></script>#}
   <script src="{% static 'assets/vendor/tagify/dist/jQuery.tagify.min.js' %}"></script>
+<script src="{% static 'assets/vendor/slick-carousel/slick/slick.js' %}"></script>
 
   <!-- JS Front -->
   <script src="{% static 'assets/js/hs.core.js' %}"></script>
@@ -21,6 +22,7 @@
 {#  <script src="{% static 'assets/js/hs.dropzone.js' %}"></script>#}
   <script src="{% static 'assets/vendor/hs-file-attach/dist/hs-file-attach.min.js' %}"></script>
   <script src="{% static 'assets/js/hs.tagify.js' %}"></script>
+<script src="{% static 'assets/js/hs.slick-carousel.js' %}"></script>
 
 
   <!-- JS Plugins Init. -->
@@ -55,6 +57,11 @@
         // initialization of tagify
     $('.js-tagify').each(function () {
       var tagify = $.HSCore.components.HSTagify.init($(this));
+    });
+
+        // initialization of slick carousel
+    $('.js-slick-carousel').each(function() {
+      var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
     });
 
 

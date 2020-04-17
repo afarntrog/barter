@@ -1,0 +1,580 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+{% load thumbnail %}
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+    <!-- End Search Section -->
+      <main id="content" role="main">
+    <!-- App Description Section -->
+    <div class="container space-top-2 space-bottom-lg-2">
+      <!-- Content -->
+      <div class="row">
+        <div class="col-md-4 col-lg-3 mb-9 mb-md-0">
+          <!-- App Info -->
+          <div class="mr-lg-2">
+            <div class="mb-7">
+            </div>
+
+            <div class="mb-md-7">
+              <h1 class="h4">Categories</h1>
+                {% for tag in product.tags.all %}
+                  <span class="d-inline-block mr-1 mb-2"><a class="btn btn-xs btn-soft-secondary" href="#">{{ tag }}</a></span>
+                {% endfor %}
+            </div>
+
+            <div class="d-none d-md-block mb-3 text-center">
+              <h2 class="h4">Product listed by:</h2>
+            </div>
+
+          <div id="stickyBlockStartPoint" >
+              <div class="js-sticky-block-card card border p-4"
+                   data-hs-sticky-block-options='{
+                     "parentSelector": "#stickyBlockStartPoint",
+                     "breakpoint": "md",
+                     "startPoint": "#stickyBlockStartPoint",
+                     "endPoint": "#stickyBlockEndPoint",
+                     "stickyOffsetTop": 12,
+                     "stickyOffsetBottom": 12
+                   }'>
+{#          profile card #}
+          <div class="text-center">
+              <h2 class="h4">{{ user.username }}</h2>
+{#              <!-- User Content -->#}
+            {% thumbnail user.profile.profile_pic "120x120" crop="center" as im %}
+                <img class="img-fluid rounded-circle mx-auto"  src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+            {% endthumbnail %}
+              <span class="d-block text-body font-size-1 mt-3">Joined in {{ user.date_joined|date:"M d, Y" }}</span>
+
+              <div class="mt-3">
+                <a class="btn btn-sm btn-outline-primary transition-3d-hover" href="{% url 'profile_detail' user.username %}">
+                  Visit Profile
+                </a>
+              </div>
+              <!-- End User Content -->
+            </div>
+           <div class="border-top pt-4 mt-4">
+              <div class="row">
+                <div class="col-6 col-md-12 col-lg-12 mb-4">
+                  <!-- Icon Block -->
+                  <div class="media">
+                    <div class="d-flex">
+                      <span class="avatar avatar-xs mr-3">
+                        <img class="avatar-img" src="{% static 'assets/svg/illustrations/review-rating-shield.svg' %}" alt="Image Description">
+                      </span>
+                      <span class="text-body font-size-1 mt-1">533 Reviews</span>
+                    </div>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-6 col-md-12 col-lg-12 mb-4">
+                  <!-- Icon Block -->
+                  <div class="d-flex">
+                    <span class="avatar avatar-xs mr-3">
+                      <img class="avatar-img" src="{% static 'assets/svg/illustrations/star.svg' %}" alt="Image Description">
+                    </span>
+                    <span class="text-body font-size-1 mt-1">4.87 rating</span>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-6 col-md-12 col-lg-12 mb-4 col-6 col-md-12 mb-4">
+                  <!-- Icon Block -->
+                  <div class="d-flex">
+                    <span class="avatar avatar-xs mr-3">
+                      <img class="avatar-img" src="{% static 'assets/svg/illustrations/medal.svg' %}" alt="Image Description">
+                    </span>
+                    <span class="text-body font-size-1 mt-1">Top barter</span>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+
+                <div class="col-6 col-md-12 col-lg-12">
+                  <!-- Icon Block -->
+                  <div class="d-flex">
+                    <span class="avatar avatar-xs mr-3">
+                      <img class="avatar-img" src="{% static 'assets/svg/illustrations/add-file.svg' %}" alt="Image Description">
+                    </span>
+                    <span class="text-body font-size-1 mt-1">{{ user.products.count }} products</span>
+                  </div>
+                  <!-- End Icon Block -->
+                </div>
+              </div>
+            </div>
+{#          EMD Profile card #}
+          </div>
+          </div>
+
+            <div class="d-none d-md-block">
+              <a class="small text-body" href="#"><i class="far fa-flag mr-1"></i> Report abuse</a>
+            </div>
+          </div>
+          <!-- End App Info -->
+        </div>
+{#      $$$$$$$$$$$$ #}
+{#      #}
+
+        <div class="col-md-8 col-lg-9 column-divider-md">
+          <div class="ml-lg-2">
+            <div class="mb-5">
+              <h2>{{ product.title }}
+                  <button type="button" class="btn fav btn-sm btn-soft-{% if product.uid in  favorites %}danger{% else %}primary{% endif %} btn-pill transition-3d-hover" data-href="{% url 'add_to_favorites' product.uid %}">
+                            <i  class="far fa-heart mr-1"></i></button></h2>
+            </div>
+
+            <!-- Nav Classic -->
+            <ul class="nav nav-classic nav-rounded nav-justified border" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold active" id="pills-one-example1-tab" data-toggle="pill" href="#pills-one-example1" role="tab" aria-controls="pills-one-example1" aria-selected="true">
+                  <div class="d-md-flex justify-content-md-center align-items-md-center">
+                    <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
+                      <img class="img-fluid" src="{%  static  'assets/svg/icons/icon-24.svg' %}" alt="SVG">
+                    </figure>
+                    Item description
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold" id="pills-two-example1-tab" data-toggle="pill" href="#pills-two-example1" role="tab" aria-controls="pills-two-example1" aria-selected="false">
+                  <div class="d-md-flex justify-content-md-center align-items-md-center">
+                    <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
+                      <img class="img-fluid" src="{%  static  'assets/svg/icons/icon-27.svg' %}" alt="SVG">
+                    </figure>
+                    Barter
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link font-weight-bold" id="pills-three-example1-tab" data-toggle="pill" href="#pills-three-example1" role="tab" aria-controls="pills-three-example1" aria-selected="false">
+                  <div class="d-md-flex justify-content-md-center align-items-md-center">
+                    <figure class="d-none d-md-block w-100 max-w-5rem mr-3">
+                      <img class="img-fluid" src="{%  static  'assets/svg/icons/icon-22.svg' %}" alt="SVG">
+                    </figure>
+                    Submit Review
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- End Nav Classic -->
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade pt-6 show active" id="pills-one-example1" role="tabpanel" aria-labelledby="pills-one-example1-tab">
+{#                <p>{{ product.title }}:</p>#}
+{##}
+{#                <div class="text-body pl-4 mb-5">#}
+{#                    {{ product.desc }}#}
+{#                </div>#}
+{##}
+{#                {% for i in product.product_images.all %}#}
+{#                    <hr>#}
+{#                    <img class="img-fluid rounded mb-4" src="{{ i.image.url }}" alt="Image Description">#}
+{#                    <br>#}
+{#                    <hr>#}
+{#                    <br>#}
+{#                {% endfor %}#}
+
+
+
+
+
+ <!-- Hero Section -->
+    <div class="container space-top-1 space-top-sm-2">
+      <div class="row">
+        <div class="col-lg-7 mb-7 mb-lg-0">
+          <div class="pr-lg-4">
+            <div class="position-relative">
+              <!-- Main Slider -->
+              <div id="heroSlider" class="js-slick-carousel slick border rounded"
+                   data-hs-slick-carousel-options='{
+                     "prevArrow": "<span class=\"fas fa-arrow-left slick-arrow slick-arrow-primary-white slick-arrow-left slick-arrow-centered-y shadow-soft rounded-circle ml-n3 ml-sm-2 ml-xl-4\"></span>",
+                     "nextArrow": "<span class=\"fas fa-arrow-right slick-arrow slick-arrow-primary-white slick-arrow-right slick-arrow-centered-y shadow-soft rounded-circle mr-n3 mr-sm-2 mr-xl-4\"></span>",
+                     "fade": true,
+                     "infinite": true,
+                     "autoplay": true,
+                     "autoplaySpeed": 7000,
+                     "asNavFor": "#heroSliderNav"
+                   }'>
+                  {% for img in product.product_images.all %}
+                <div class="js-slide">
+                  <img class="img-fluid w-100 rounded" src="{{ img.image.url }}" alt="Image Description">
+                </div>
+                  {% endfor %}
+              </div>
+              <!-- End Main Slider -->
+
+              <!-- Slider Nav -->
+              <div class="position-absolute bottom-0 right-0 left-0 px-4 py-3">
+                <div id="heroSliderNav" class="js-slick-carousel slick slick-gutters-1 slick-transform-off max-w-27rem mx-auto"
+                     data-hs-slick-carousel-options='{
+                       "infinite": true,
+                       "autoplaySpeed": 7000,
+                       "slidesToShow": {{ product.product_images.all|length }},
+                       "isThumbs": true,
+                       "isThumbsProgress": true,
+                       "thumbsProgressOptions": {
+                         "color": "#377dff",
+                         "width": 8
+                       },
+                       "thumbsProgressContainer": ".js-slick-thumb-progress",
+                       "asNavFor": "#heroSlider"
+                     }'>
+                    {% for img in product.product_images.all %}
+                  <div class="js-slide p-1">
+                    <a class="js-slick-thumb-progress d-block avatar avatar-circle border p-1" href="javascript:;">
+{#                      <img class="avatar-img" src="{{ img.image.url }}" alt="Image Description">#}
+                     {% thumbnail img.image "100x100" crop="center" as im %}
+                        <img class="avatar-img"  src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                    {% endthumbnail %}
+                    </a>
+                  </div>
+                    {% endfor %}
+                </div>
+              </div>
+              <!-- End Slider Nav -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Description -->
+        <div class="col-lg-5">
+          <!-- Rating -->
+          <div class="d-flex align-items-center small mb-2">
+            <div class="text-warning mr-2">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <a class="link-underline" href="#reviewSection">Read all 287 reviews</a>
+          </div>
+          <!-- End Rating -->
+
+          <!-- Title -->
+          <div class="mb-5">
+            <h1 class="h2">{{ product.title }}</h1>
+            <p>{{ product.desc }}</p>
+          </div>
+          <!-- End Title -->
+        </div>
+        <!-- End Product Description -->
+      </div>
+    </div>
+    <!-- End Hero Section -->
+
+{#                  THIS IS END #}
+            </div>
+
+
+              <div class="tab-pane fade pt-6" id="pills-two-example1" role="tabpanel" aria-labelledby="pills-two-example1-tab">
+                <!-- Review Header -->
+                <div class="d-sm-flex justify-content-sm-between align-items-sm-center border-bottom pb-3 mb-4">
+                  <div class="d-flex align-items-center mb-2 mb-sm-0">
+                    <h4 class="mb-0">Reviews <small class="text-muted ml-1">(156)</small></h4>
+                  </div>
+
+                  <!-- Select -->
+                  <select class="js-selectpicker dropdown-select"
+                          data-hs-selectpicker-options='{
+                          "width": "fit",
+                          "style": "btn-soft-secondary btn-xs"
+                        }'>
+                    <option value="showCategoryByFilterSelect1" selected>Newest first</option>
+                    <option value="showCategoryByFilterSelect2">Highest rated</option>
+                    <option value="showCategoryByFilterSelect3">Lowest rated</option>
+                  </select>
+                  <!-- End Select -->
+                </div>
+                <!-- End Review Header -->
+
+                <!-- Review -->
+                <div class="media">
+                  <div class="avatar avatar-circle mr-3">
+                    <img class="avatar-img" src="{%  static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">
+                  </div>
+                  <div class="media-body border-bottom pb-6 mb-6">
+                    <span class="h4">Christina Kray</span>
+
+                    <p>Just started using Front for Google Drive, and finding it to serve all my needs and it integrates perfectly with Front! Sharing diagrams is now much easier for our team.</p>
+
+                    <small class="text-body mr-2">Was this review helpful?</small>
+                    <a class="small mr-2" href="javascript:;">Yes</a>
+                    <a class="small" href="javascript:;">No</a>
+
+                    <!-- Reply -->
+                    <div class="card bg-light shadow-none p-3 mt-4">
+                      <div class="media">
+                        <div class="avatar mr-3">
+                          <img class="avatar-img" src="{%  static 'assets/img/160x160/img23.png' %}" alt="Image Description">
+                        </div>
+                        <div class="media-body">
+                          <span class="d-block text-dark font-weight-bold">Google Drive</span>
+                          <p>Thanks for the review Maria! Let us know if you ever need anything.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Reply -->
+                  </div>
+                </div>
+                <!-- End Review -->
+
+                <div class="text-center">
+                  <a class="font-weight-bold" href="#">Read More Reviews <i class="fas fa-angle-right ml-1"></i></a>
+                </div>
+              </div>
+
+              <div class="tab-pane fade pt-6" id="pills-three-example1" role="tabpanel" aria-labelledby="pills-three-example1-tab">
+                <h4 class="mb-3">Pricing plans</h4>
+
+                <!-- Pricing -->
+                <div class="custom-control custom-radio custom-control-inline checkbox-outline checkbox-icon w-100">
+                  <input type="radio" id="pricingRadio1" name="pricingRadio1" class="custom-control-input checkbox-outline-input checkbox-icon-input" checked>
+                  <label class="checkbox-outline-label checkbox-icon-label w-100 rounded p-4" for="pricingRadio1">
+                    <span class="row">
+                      <span class="col-sm-3 order-sm-2 text-sm-right mb-3 mb-sm-0">
+                        <span class="d-block mb-2">
+                          <span class="text-primary font-weight-bold align-top">$</span>
+                          <span class="font-size-3 text-primary font-weight-bold">25</span>
+                          <span class="font-size-1">/ mo</span>
+                        </span>
+                      </span>
+                      <span class="col-sm-9 order-sm-1">
+                        <span class="d-block h3 mb-1">Launch</span>
+                        <span class="d-block">99GB storage in launch accounts</span>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+                <!-- End Pricing -->
+
+
+
+                <div class="text-center mt-5">
+                  <div class="mb-5">
+                    <p class="font-size-1">Need 100TB+ storage? <a class="font-weight-bold" href="#">Contact us for custom pricing</a></p>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-wide transition-3d-hover">Submit</button>
+                </div>
+              </div>
+            </div>
+            <!-- End Tab Content -->
+
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Content -->
+  </main>
+    </div>
+    <!-- End App Description Section -->
+
+    <!-- Related Items Section -->
+    <div class="container space-2 space-bottom-lg-3">
+
+      <!-- Title -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 class="mb-0">Related Apps</h3>
+        <a class="font-size-1 font-weight-bold" href="#">View All <i class='fas fa-angle-right fa-sm ml-1'></i></a>
+      </div>
+      <!-- End Title -->
+
+      <div class="row mx-n2">
+        <!-- Card -->
+        <div class="col-sm-6 col-md-4 px-2 mb-3">
+          <div class="card card-frame h-100">
+            <a class="card-body" href="app-description.html">
+              <div class="media">
+                <div class="avatar avatar-xs mt-1 mr-3">
+                  <img class="avatar-img" src="{% static 'assets/img/160x160/img5.jpg' %}" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block text-dark font-weight-bold">Spotify</span>
+                    <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                  </div>
+                  <small class="d-block text-body">Entertainment</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="col-sm-6 col-md-4 px-2 mb-3">
+          <div class="card card-frame h-100">
+            <a class="card-body" href="app-description.html">
+              <div class="media">
+                <div class="avatar avatar-xs mt-1 mr-3">
+                  <img class="avatar-img" src="{% static 'assets/img/160x160/img3.jpg' %}" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block text-dark font-weight-bold">Slack</span>
+                  </div>
+                  <small class="d-block text-body">Communication</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="col-sm-6 col-md-4 px-2 mb-3">
+          <div class="card card-frame h-100">
+            <a class="card-body" href="app-description.html">
+              <div class="media">
+                <div class="avatar avatar-xs mt-1 mr-3">
+                  <img class="avatar-img" src="{% static 'assets/img/160x160/img23.png' %}" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block text-dark font-weight-bold">Google Drive</span>
+                    <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                  </div>
+                  <small class="d-block text-body">File management</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="col-sm-6 col-md-4 px-2 mb-3 mb-md-0">
+          <div class="card card-frame h-100">
+            <a class="card-body" href="app-description.html">
+              <div class="media">
+                <div class="avatar avatar-xs mt-1 mr-3">
+                  <img class="avatar-img" src="{% static 'assets/img/160x160/img12.png' %}" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block text-dark font-weight-bold">Atlassian</span>
+                  </div>
+                  <small class="d-block text-body">Developer tools</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="col-sm-6 col-md-4 px-2 mb-3 mb-sm-0">
+          <div class="card card-frame h-100">
+            <a class="card-body" href="app-description.html">
+              <div class="media">
+                <div class="avatar avatar-xs mt-1 mr-3">
+                  <img class="avatar-img" src="{% static 'assets/img/160x160/img18.png' %}" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block text-dark font-weight-bold">Behance</span>
+                    <img class="ml-2" src="{% static 'assets/svg/illustrations/top-vendor.svg' %}" alt="Image Description" title="Top Vendor" width="16">
+                  </div>
+                  <small class="d-block text-body">Design tools</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <div class="col-sm-6 col-md-4 px-2">
+          <div class="card card-frame h-100">
+            <a class="card-body" href="app-description.html">
+              <div class="media">
+                <div class="avatar avatar-xs mt-1 mr-3">
+                  <img class="avatar-img" src="{% static 'assets/img/160x160/img11.jpg' %}" alt="Image Description">
+                </div>
+                <div class="media-body">
+                  <div class="d-flex align-items-center">
+                    <span class="d-block text-dark font-weight-bold">InVision</span>
+                  </div>
+                  <small class="d-block text-body">Developer tools</small>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+    <!-- End Related Items Section -->
+    <!-- ========== END MAIN CONTENT ========== -->
+{% endblock content %}
+
+
+
+
+{% block javascript %}
+{{ block.super }}
+<script>
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+$(document).ready(function () {
+    var csrftoken = getCookie('csrftoken');
+    {#https://docs.djangoproject.com/en/3.0/ref/csrf/#ajax#}
+
+    function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+
+    $(".fav").click(function () {
+        var clicked = $(this);
+        $.ajax({
+            type: 'POST', // or another (GET), whatever you need
+            url: $(this).attr("data-href"),
+            data:  $(this).serialize(),
+            success: function (data) {
+                if (data['class'] == 'success') {
+                    clicked.removeClass('btn-soft-primary');
+                    clicked.addClass('btn-soft-danger')
+                }
+                else {
+                    clicked.removeClass('btn-soft-danger');
+                    clicked.addClass('btn-soft-primary')
+                }
+                // success callback
+                // you can process data returned by function from views.py
+            },
+            error: function (data) {
+                alert('Error: Please contact us.')
+            },
+        })
+    })
+});
+
+  </script>
+{% endblock javascript %}
+

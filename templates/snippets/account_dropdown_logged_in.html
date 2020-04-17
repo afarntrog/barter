@@ -1,0 +1,86 @@
+{% load thumbnail %}
+{% load static %}
+{#           ACCOUNT   #}
+<!-- Account -->
+<li class="hs-unfold navbar-nav-last-item">
+    <a class="js-hs-unfold-invoker rounded-circle" href="javascript:"
+       data-hs-unfold-options='{
+                    "target": "#accountDropdown",
+                    "type": "css-animation",
+                    "event": "hover",
+                    "duration": 50,
+                    "delay": 0,
+                    "hideOnScroll": "true"
+                   }'>
+                  <span class="avatar avatar-xs avatar-circle">
+{#                    <img class="avatar-img" src="{% static 'assets/img/100x100/img1.jpg' %}" alt="Image Description">#}
+                      {% thumbnail user.profile.profile_pic "100x100" crop="center" as im %}
+                          <img class="avatar-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                      {% endthumbnail %}
+                  </span>
+    </a>
+
+    <div id="accountDropdown"
+         class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
+         style="min-width: 245px;">
+        <div class="card">
+            <!-- Header -->
+            <div class="card-header p-4">
+                <a class="media align-items-center" href="{% url 'profile_detail' user.username %}">
+
+                    <div class="avatar mr-3">
+                        {% thumbnail user.profile.profile_pic "100x100" crop="center" as im %}
+                            <img class="avatar-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+                        {% endthumbnail %}
+                    </div>
+
+                    <div class="media-body">
+                        <span class="d-block font-weight-bold">{{ user.username }} <span
+                                class="badge badge-success ml-1">Pro</span></span>
+                        <span class="d-block small text-muted">natalygaga@gmail.com</span>
+                    </div>
+                </a>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body py-3">
+                <a class="dropdown-item px-0" href="{% url 'home' %}">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-comments"></i>
+                        </span>
+                    Messages
+                </a>
+                <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-tasks"></i>
+                        </span>
+                    My Products
+                </a>
+                <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-user"></i>
+                        </span>
+                    Account
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item px-0" href="#">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-question-circle"></i>
+                        </span>
+                    Help
+                </a>
+                <a class="dropdown-item px-0" href="{% url 'account_logout' %}">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-power-off"></i>
+                        </span>
+                    Log out
+                </a>
+            </div>
+            <!-- End Body -->
+        </div>
+    </div>
+</li>
+<!-- End Account -->

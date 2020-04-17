@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'phonenumber_field',
     'taggit',
+    'sorl.thumbnail',
 
     #     APPS
     'users.apps.UsersConfig',
     'core.apps.CoreConfig',
+    'review.apps.ReviewConfig',
 
 
 ]
@@ -91,6 +93,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+# https://docs.djangoproject.com/en/dev/topics/cache/
+# https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-memcached-on-ubuntu-16-04
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
     }
 }
 

@@ -4,14 +4,33 @@
     <list default="true" id="98927935-c6cf-424c-ad4e-ace74a9a18fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/barter_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/barter_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/barter_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/barter_project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-marketplace/app-search-results.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app-marketplace/app-search-results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/app-marketplace/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/post_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/post_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/core/product_listing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/product_listing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/about-agency.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/about-agency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/careers-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/careers-single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/careers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/careers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/contacts-agency.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/contacts-agency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/contacts-start-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/contacts-start-up.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/customer-story.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/customer-story.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/hire-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/hire-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/login-simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/login-simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/pricing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/pricing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/privacy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/privacy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/recover-account-simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/recover-account-simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/services-agency.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/services-agency.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/signup-simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/signup-simple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/terms.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/terms.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/snippets/js_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/snippets/js_source.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users/author.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/author.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
@@ -61,6 +80,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/assets/img/100x100" />
+      <recent name="$PROJECT_DIR$/templates/core" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/core" />
       <recent name="$PROJECT_DIR$/templates/users" />
@@ -106,7 +129,8 @@
       <workItem from="1586701540638" duration="41225000" />
       <workItem from="1586801523560" duration="32330000" />
       <workItem from="1587088825761" duration="12029000" />
-      <workItem from="1587141821258" duration="4087000" />
+      <workItem from="1587141821258" duration="4431000" />
+      <workItem from="1587150068480" duration="13252000" />
     </task>
     <servers />
   </component>
@@ -138,11 +162,11 @@
       <screen x="0" y="189" width="1600" height="873" />
     </state>
     <state x="154" y="232" width="1195" height="730" key="SettingsEditor/0.189.1600.873/1600.0.1920.1080@0.189.1600.873" timestamp="1586661495799" />
-    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1587141821558">
+    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1587150070478">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="454" y="452" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@0.189.1600.873" timestamp="1586661177585" />
-    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587141821558" />
+    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587150070478" />
     <state x="2326" y="454" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586822041763">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>

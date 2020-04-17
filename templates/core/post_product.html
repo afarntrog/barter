@@ -23,7 +23,7 @@
 {#          TAGS #}
 
           <div class="form-group">
-              <label class="input-label" for="tagInput">Tags - help label product</label>
+              <label class="input-label" for="tagInput">Tags <i class="far fa-question-circle text-body ml-1" data-container="body" data-toggle="popover" data-placement="top" data-trigger="hover" title="Add Tags" data-content="Tags help people find your products faster. Write text and press enter."></i></label>
               {{ form.tags|add_class:"js-tagify tagify-form-control"|attr:"name:tags"|attr:"id:tagInput"|attr:"placeholder:Write some tags e.g: crystal. (Press enter to create tag)"|attr:"value=i'm_a_tag" }}
           </div>
 {#          Images #}

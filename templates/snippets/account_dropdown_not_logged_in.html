@@ -1,0 +1,50 @@
+{% load thumbnail %}
+{% load static %}
+{#           ACCOUNT   #}
+<!-- Account -->
+<li class="hs-unfold navbar-nav-last-item">
+    <a class="js-hs-unfold-invoker rounded-circle" href="javascript:"
+       data-hs-unfold-options='{
+                    "target": "#accountDropdown",
+                    "type": "css-animation",
+                    "event": "hover",
+                    "duration": 50,
+                    "delay": 0,
+                    "hideOnScroll": "true"
+                   }'>
+                  <span class="avatar avatar-xs avatar-circle">
+                    <img class="avatar-img" src="{% static 'assets/img/100x100/download.jpeg' %}" alt="Image Description">
+                  </span>
+    </a>
+
+    <div id="accountDropdown"
+         class="hs-unfold-content dropdown-menu dropdown-menu-sm-right dropdown-menu-no-border-on-mobile p-0"
+         style="min-width: 245px;">
+        <div class="card">
+            <!-- Header -->
+            <div class="card-header p-4">
+                <h2>Welcome!</h2>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body py-3">
+                <a class="dropdown-item px-0" href="{% url 'account_signup' %}">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-comments"></i>
+                        </span>
+                    Signup
+                </a>
+                <a class="dropdown-item px-0" href="{% url 'account_login' %}">
+                        <span class="dropdown-item-icon">
+                          <i class="fas fa-tasks"></i>
+                        </span>
+                    Login
+                </a>
+
+            </div>
+            <!-- End Body -->
+        </div>
+    </div>
+</li>
+<!-- End Account -->
