@@ -1,4 +1,4 @@
-#!/home/aaron/Code/Django/barter/env/bin/python3
+#!/home/aaron/Code/Django/barter/env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

@@ -58,7 +58,6 @@ class ProfileViewCount(models.Model):
     ip = models.CharField(max_length=40)
     created = models.DateTimeField(auto_now_add=True)
 
-
 # Create a new profile automatically on signup.
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
