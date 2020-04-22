@@ -1,4 +1,3 @@
 *.html linguist-vendored
 *.css linguist-vendored
 staticfiles/* linguist-vendored
-static/css* linguist-vendored
