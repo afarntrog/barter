@@ -1,6 +1,6 @@
 *.html linguist-vendored
 *.css linguist-vendored
 *.scss linguist-vendored
-
-staticfiles/* linguist-vendored
-static/assets/* linguist-vendored
+static/* linguist-vendored=true
+static/assets/js/* linguist-vendored=true
+templates/base.html linguist-vendored=false
