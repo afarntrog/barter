@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98927935-c6cf-424c-ad4e-ace74a9a18fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/barter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/barter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/consumers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/room.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/room.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +51,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -103,6 +107,8 @@
       <workItem from="1587150068480" duration="13252000" />
       <workItem from="1587308121311" duration="1950000" />
       <workItem from="1587585369052" duration="1768000" />
+      <workItem from="1587650542585" duration="4841000" />
+      <workItem from="1587698188037" duration="1322000" />
     </task>
     <servers />
   </component>
@@ -130,15 +136,16 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="263" height="541" key="HiddenNamespacesPopup/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1586720508732" />
-    <state x="154" y="232" width="1195" height="730" key="SettingsEditor" timestamp="1586661495799">
-      <screen x="0" y="189" width="1600" height="873" />
+    <state x="1785" y="53" width="1195" height="730" key="SettingsEditor" timestamp="1587657778124">
+      <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="154" y="232" width="1195" height="730" key="SettingsEditor/0.189.1600.873/1600.0.1920.1080@0.189.1600.873" timestamp="1586661495799" />
-    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1587585370876">
+    <state x="1785" y="53" key="SettingsEditor/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587657778124" />
+    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog" timestamp="1587698189158">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="454" y="452" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@0.189.1600.873" timestamp="1586661177585" />
-    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587585370876" />
+    <state x="2145" y="325" key="com.intellij.ide.util.TipDialog/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587698189158" />
     <state x="2326" y="454" width="457" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586822041763">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -147,9 +154,9 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2198" y="111" width="724" height="855" key="find.popup/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587092956563" />
-    <state x="2223" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1587096526528">
+    <state x="2223" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1587657436761">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2223" y="237" width="672" height="678" key="search.everywhere.popup/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587096526528" />
+    <state x="2223" y="237" width="672" height="678" key="search.everywhere.popup/0.189.1600.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1587657436761" />
   </component>
 </project>
