@@ -139,3 +139,4 @@ cython_debug/
 
 media/profile_pics/*
 media/product_images/*
+static/assests/
